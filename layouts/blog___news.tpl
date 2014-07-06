@@ -8,23 +8,17 @@
 </head>
 
 <body class="blog-page">
-  {% if editmode %}<button class="bgpicker-btn js-bgpicker-body-settings" data-bg-image="{{ body_image }}" data-bg-color="{{ body_color }}"></button>{% endif %}
-  {% unless editmode %}
-    {% if body_color != '' or editmode %}<div class="background-color js-bgpicker-body-color"{{ body_color_style }}></div>{% endif %}
-  {% else %}
-    <div class="background-color js-bgpicker-body-color"{{ body_color_style }}></div>
-  {% endunless %}
-
   <div class="container">
-    {% include "header" %}
-    {% include "tags-blog" %}
+    <div class="wrap">
+      {% include "sidebar" %}
 
-    <main class="content" role="main">
-      {% addbutton %}
-      {% for article in articles %}
-        {% include "post-box" %}
-      {% endfor %}
-    </main>
+      <main class="content" role="main">
+        {% addbutton %}
+        {% for article in articles %}
+          {% include "post-box" %}
+        {% endfor %}
+      </main>
+    </div>
 
     {% include "footer" %}
   </div>

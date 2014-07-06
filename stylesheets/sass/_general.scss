@@ -1,7 +1,6 @@
 /* GENERAL */
 // Styling rules for the basic parts of the page. These rules affect the entire site.
 body {
-  position: relative;
   margin: 0;
   padding: 0;
   font-family: 'Raleway', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
@@ -9,9 +8,6 @@ body {
   font-size: 16px;
   line-height: 1.3;
   @include color($primary-color);
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
 }
 
 // Layout specific body classes.
@@ -36,6 +32,23 @@ body {
   content: "";
   display: table;
   clear: both;
+}
+
+%flexbox {
+  .flexbox & {
+    @include display(flex);
+  }
+
+  .no-flexbox & {
+    display: table;
+  }
+
+  @include query($tablet-3) {
+    .no-flexbox &,
+    .flexbox & {
+      display: block;
+    }
+  }
 }
 
 %stretch {
@@ -69,11 +82,21 @@ body {
 
 // Styling rules for the main container.
 .container {
+  max-width: 978px;
+  margin: 115px auto;
+  padding: 0 25px;
+
   a {
     text-decoration: none;
 
     img {
       border: none;
     }
+  }
+}
+
+.wrap {
+  .container & {
+    @extend %flexbox;
   }
 }

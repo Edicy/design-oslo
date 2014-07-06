@@ -8,12 +8,14 @@
 
 <body class="common-page">
   <div class="container">
-    {% include "sidebar" %}
+    <div class="wrap">
+      {% include "sidebar" %}
 
-    <main class="content" role="main">
-      <header class="content-header content-formatted">{% content name="slogan" %}</header>
-      <section class="content-body content-formatted">{% content %}</section>
-    </main>
+      <main class="content" role="main">
+        <header class="content-header content-formatted">{% content name="slogan" %}</header>
+        <section class="content-body content-formatted">{% content %}</section>
+      </main>
+    </div>
 
     {% include "footer" %}
 

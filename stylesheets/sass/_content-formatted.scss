@@ -16,16 +16,25 @@
 
   // Styling rules for the editable content area headings.
   h1, h2, h3, h4, h5, h6 {
-    @include color($secondary-color);
+    font-weight: 400;
   }
 
   h1 {
+    font-size: 38px;
+    @include color($secondary-color);
+  }
+
+  h2, h3, h4, h5, h6 {
+    @include color($third-color);
   }
 
   h2 {
+    margin-top: 65px;
+    font-size: 24px;
   }
 
   h3, h4, h5, h6 {
+    font-size: 20px;
   }
 
   // Styling rules for the editable content area paragraphs, lists and links.
@@ -106,5 +115,9 @@
 
   .edy-partial-view {
     margin-top: 25px;
+
+    &:first-child {
+      margin-top: 0;
+    }
   }
 }

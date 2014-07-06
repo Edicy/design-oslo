@@ -77,15 +77,28 @@
 
 // Styling rules for the site's main menu.
 .menu-main {
+  margin-top: 50px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  @include border(top, 1px, solid, $black, 0.2);
+  @include border(bottom, 1px, solid, $black, 0.2);
+
   .menu {
     .menu-item {
+      margin-top: 10px;
     }
 
     .menu-link {
-      &:hover {
-      }
+      text-transform: uppercase;
+      font-weight: 600;
+      @include color($secondary-color);
 
       &.active {
+        @include border(bottom, 2px, solid, $secondary-color);
+
+        &:hover {
+          border: none;
+        }
       }
     }
 

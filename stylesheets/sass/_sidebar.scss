@@ -7,4 +7,23 @@
 // 3. Uncomment the "_sidebar.scss" partial in the "main.scss" file.
 // 4. Add the styling rules for the generated component.
 .sidebar {
+  width: 100%;
+  max-width: 198px;
+  min-width: 198px;
+  margin-right: 60px;
+}
+
+.sidebar-title {
+  text-transform: uppercase;
+  line-height: 1.1;
+  font-weight: 600;
+  font-size: 30px;
+
+  &, a {
+    @include color($secondary-color);
+  }
+
+  a:hover {
+    @include color($secondary-color,.8);
+  }
 }
