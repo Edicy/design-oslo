@@ -1,0 +1,10 @@
+
+.DS_Store
+
+.voog
+
+.sass-cache
+
+*.html
+
+sftp-config.json
