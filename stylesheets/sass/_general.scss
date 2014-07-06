@@ -69,15 +69,6 @@ body {
 
 // Styling rules for the main container.
 .container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  @include bg($white);
-
-  @include query($tablet-2) {
-    padding: 20px
-  }
-
   a {
     text-decoration: none;
 
