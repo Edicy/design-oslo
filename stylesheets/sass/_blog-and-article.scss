@@ -1,0 +1,55 @@
+/* BLOG & BLOG ARTICLE */
+// Styling rules for both - the blog listing view and the blog single article view
+.post {
+  .post-header {
+  }
+
+  .post-title {
+
+    &, a {
+
+    }
+
+    a {
+      &:hover {
+
+      }
+    }
+  }
+
+  .post-date {
+  }
+
+  .post-author {
+  }
+
+  .post-content {
+    .post-excerpt {
+    }
+
+    .post-body {
+    }
+  }
+
+  .post-footer {
+  }
+
+  .post-comments-count {
+    a {
+      &:hover {
+      }
+    }
+  }
+}
+
+// Style rules for the blog listing view only
+.blog-page {
+  .post {
+  }
+}
+
+// Style rules for the blog single article view only
+.post-page {
+  .post {
+  }
+}
