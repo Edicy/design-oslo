@@ -1,8 +1,59 @@
 /* CONTENT */
 // Styling rules for the site's main content area. These rules affect the entire site.
 .content {
+  width: 720px;
 }
 
 .content-body {
   margin-top: 53px;
+}
+
+.content-box {
+  position: relative;
+
+  &:after {
+    display: block;
+    content: '';
+
+  }
+}
+
+.large-content-box {
+  width: 720px;
+  @include bg($red);
+
+  &:after {
+    padding-top: 65.3%;
+  }
+}
+
+.medium-content-box,
+.small-content-box {
+  width: 350px;
+
+  &:first-child {
+    margin-right: 20px;
+  }
+}
+
+.medium-content-box {
+  width: 350px;
+  @include bg($green);
+
+  &:after {
+    padding-top: 100.1%;
+  }
+}
+
+.small-content-box {
+  @include bg($blue);
+
+  &:after {
+    padding-top: 25.8%;
+  }
+}
+
+.content-box-inner {
+  position: absolute;
+  @extend %stretch;
 }

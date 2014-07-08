@@ -12,14 +12,45 @@
       {% include "sidebar" %}
 
       <main class="content" role="main">
-        <header class="content-header">
-          {% if editmode or site.header.size > 0 %}<div class="content-title content-formatted">{% editable site.header %}</div>{% endif %}
+        <div class="wrap">
+          <div class="content-box large-content-box">
+            <div class="content-box-inner">
+              <div class="content-box-content">
+              <div class="content-box-content-inner">
+                Small bites for gold night
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-          {% capture content_slogan_html %}{% unless editmode %}{% content name="slogan" %}{% endunless %}{% endcapture %}
-          <div class="content-slogan content-formatted js-content-optional">{% content name="slogan" %}</div>
-        </header>
+        <div class="wrap">
+          <div class="content-box medium-content-box">
+            <div class="content-box-inner">
+              <div>Small bites for gold night</div>
+            </div>
+          </div>
 
-        <section class="content-body content-formatted">{% content %}</section>
+          <div class="content-box medium-content-box">
+            <div class="content-box-inner">
+              <div>Small bites for gold night</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wrap">
+          <div class="content-box small-content-box">
+            <div class="content-box-inner">
+              <div>Small bites for gold night</div>
+            </div>
+          </div>
+
+          <div class="content-box small-content-box">
+            <div class="content-box-inner">
+              <div>Small bites for gold night</div>
+            </div>
+          </div>
+        </div>
       </main>
     </div>
 

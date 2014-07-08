@@ -98,5 +98,13 @@ body {
 .wrap {
   .container & {
     @extend %flexbox;
+
+    .front-page & {
+      margin-top: 20px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
   }
 }
