@@ -21,7 +21,7 @@
 {% comment %}<!-- STYLESHEETS -->{% endcomment %}
 <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Raleway:400,700'>
 {% stylesheet_link "main.min.css" %}
-{% if editmode %}<link rel="stylesheet" href="/assets/admin/tools/0.1.3/edicy-tools.css">{% endif %}
+{% if editmode %}<link rel="stylesheet" href="{{ site.static_asset_host }}/libs/edicy-tools/latest/edicy-tools.css">{% endif %}
 <link rel="stylesheet" href="{{ site.static_asset_host }}/libs/edicy-search/1.0.0/edicy-search.css">
 
 {% comment %}<!-- SITE TITLE -->{% endcomment %}
