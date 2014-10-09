@@ -200,9 +200,9 @@ body {
   margin-top: 50px;
   padding-top: 10px;
   padding-bottom: 20px;
-  border-top: 1px solid black;
+  border-top: 1px solid #000000;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #000000;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 .menu-main .menu .menu-item {
