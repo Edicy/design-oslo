@@ -23,17 +23,6 @@
     });
   };
 
-  // Reduces opacity of the gallery images that are not under the cursor.
-  var handleGalleryHover = function() {
-    $('.edys-gallery-item').mouseover(function() {
-      $(this).siblings('.edys-gallery-item').find('.edys-gallery-image').addClass('inactive');
-    });
-
-    $('.edys-gallery-item').mouseout(function() {
-      $(this).siblings('.edys-gallery-item').find('.edys-gallery-image').removeClass('inactive');
-    });
-  };
-
   // Removes optional content elements if element doesn't have any content.
   var removeOptionalContent = function() {
     optionalContent = $('.js-content-optional');
@@ -61,34 +50,7 @@
     $('.content-formatted table').wrap('<div class="table-container overthrow"></div>');
   };
 
-  // Checks the presence of the table scrollbar.
-  var checkScrollBar = function() {
-    jQuery.fn.hasScrollBar = function(direction) {
-      if (direction == 'vertical') {
-        return this.get(0).scrollHeight > this.innerHeight();
-      } else if (direction == 'horizontal') {
-        return this.get(0).scrollWidth > this.innerWidth();
-      }
-      return false;
-    }
-  };
-
-  // Adds horizontal scroll to tables that don't fit into the content area.
-  var handleTableHorizontalScrolling = function() {
-    $.each($('.table-container'), function() {
-      if ($(this).hasScrollBar('horizontal') === true) {
-        $(this).addClass('horizontal-scroll');
-      } else {
-        $(this).removeClass('horizontal-scroll');
-      }
-    });
-  };
-
-  // Initiates the table horisontal scroll function when window is resized.
   var handleWindowResize = function() {
-    $(window).resize(function() {
-      handleTableHorizontalScrolling();
-    });
   };
 
   // FUNCTIONS INITIATIONS
@@ -116,13 +78,8 @@
     handleLanguageSwitch();
     toggleMainMenu();
     handlePopoverMenuHide();
-    handleGalleryHover();
     handleWindowResize();
     wrapTables();
-    if ($('.table-container').length > 0) {
-      checkScrollBar();
-      handleTableHorizontalScrolling();
-    }
   };
 
   // Enables the usage of the initiations outside this file.
