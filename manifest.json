@@ -186,12 +186,6 @@
       "filename": "modernizr.min.js"
     },
     {
-      "content_type": "application/x-wais-source",
-      "file": "javascripts/src",
-      "kind": "javascripts",
-      "filename": "src"
-    },
-    {
       "content_type": "text/css",
       "file": "stylesheets/main.css",
       "kind": "stylesheets",
@@ -202,12 +196,6 @@
       "file": "stylesheets/main.min.css",
       "kind": "stylesheets",
       "filename": "main.min.css"
-    },
-    {
-      "content_type": "text/unknown",
-      "file": "stylesheets/scss",
-      "kind": "stylesheets",
-      "filename": "scss"
     }
   ]
 }
