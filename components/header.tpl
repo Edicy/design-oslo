@@ -1,6 +1,6 @@
 <header class="header">
   <div class="header-left">
-    <div class="header-title content-formatted">{% unless editmode %}<a href="{{ site.root_item.url }}">{% endunless %}{{ site.header }}{% unless editmode %}</a>{% endunless %}</div>
+    <div class="header-title content-formatted">{% unless editmode %}<a href="{{ site.root_item.url }}">{% endunless %}{{ page.site_header }}{% unless editmode %}</a>{% endunless %}</div>
 
     <button class="menu-btn js-menu-btn">
       <span class="menu-stripe"></span>
