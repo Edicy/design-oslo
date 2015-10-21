@@ -11,22 +11,16 @@
       {% include "sidebar" %}
 
       <main class="content" role="main">
-        <header class="content-header content-formatted">{% content name="slogan" %}</header>
         <section class="content-body content-formatted">{% content %}</section>
+
+        {% include "footer" %}
       </main>
     </div>
-
-    {% include "footer" %}
 
   </div>
 
   {% include "javascripts" %}
-  {% include "bg-picker" %}
   <script>
-    {% unless body_image == nil or body_image == '' %}
-      $.backstretch('{{ body_image }}');
-    {% endunless %}
-
     site.initCommonPage();
   </script>
 </body>

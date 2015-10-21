@@ -16,6 +16,7 @@
 
   // Styling rules for the editable content area headings.
   h1, h2, h3, h4, h5, h6 {
+    font-family: $font-family-secondary;
     font-weight: 400;
   }
 
@@ -42,7 +43,22 @@
   }
 
   ul {
+    list-style-type: none;
+    padding: 0;
+
     li {
+      position: relative;
+      padding-left: 25px;
+      margin: 15px 0;
+
+      &:before {
+        content: '°';
+        position: absolute;
+        left: 7px;
+        top: 1px;
+        font-size: 20px;
+        color: #B4B4B4;
+      }
     }
   }
 
@@ -53,7 +69,7 @@
 
   a {
     @include color($secondary-color);
-    
+
     &:hover {
     }
   }
@@ -92,14 +108,26 @@
 
   table {
     width: 100%;
-    margin-top: 20px;
+    margin: 20px 0;
     font-size: 16px;
     border-collapse: collapse;
 
-    td {
+    th, td {
       padding: 10px;
-      @include border(top, 1px, solid, $third-color);
-      @include border(bottom, 1px, solid, $third-color);
+      text-align: left;
+      @include border(bottom, 1px, solid, $grey-4);
+
+      &:first-child {
+        padding-left: 0;
+      }
+    }
+
+    th {
+      font-weight: bold;
+      @include border(top, 1px, solid, $grey-4);
+    }
+
+    td {
     }
   }
 
