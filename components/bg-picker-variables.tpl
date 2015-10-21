@@ -38,37 +38,21 @@
   {% endif %}
 
   {% if main_content_bg_image == nil %}
-    {% if front_page %}
-      {% assign main_content_bg_image = images_path | append: "/front-header-bg_block.jpg" %}
-    {% else %}
-      {% assign main_content_bg_image = images_path | append: "/page-header-bg_block.jpg" %}
-    {% endif %}
+    {% assign main_content_bg_image = images_path | append: "/main-content-bg.jpg" %}
   {% endif %}
 
   {% if main_content_bg_image_sizes == nil %}
-    {% if front_page %}
-      {% assign main_content_bg_image_sizes_str = '[{"url":"' | append: images_path | append: '/front-header-bg.jpg", "width":2560, "height":1702}, {"url":"' | append: images_path | append: '/front-header-bg_huge.jpg", "width":2048, "height":1362}, {"url":"' | append: images_path | append: '/front-header-bg_large.jpg", "width":1280, "height":851}]' %}
-    {% else %}
-      {% assign main_content_bg_image_sizes_str = '[{"url":"' | append: images_path | append: '/page-header-bg.jpg", "width":2560, "height":1707}, {"url":"' | append: images_path | append: '/page-header-bg_huge.jpg", "width":2048, "height":1366}, {"url":"' | append: images_path | append: '/page-header-bg_large.jpg", "width":1280, "height":853}]' %}
-    {% endif %}
+    {% assign main_content_bg_image_sizes_str = '[{"url":"' | append: images_path | append: '/main-content-bg.jpg", "width":2560, "height":1707}, {"url":"' | append: images_path | append: '/main-content-bg_huge.jpg", "width":2048, "height":1366}, {"url":"' | append: images_path | append: '/main-content-bg_large.jpg", "width":1280, "height":853}]' %}
   {% else %}
     {% assign main_content_bg_image_sizes_str = main_content_bg_image_sizes | json %}
   {% endif %}
 
   {% if main_content_bg_color == nil %}
-    {% if front_page %}
-      {% assign main_content_bg_color = "rgba(0, 0, 0, 0.1)" %}
-    {% else %}
-      {% assign main_content_bg_color = "rgba(0, 0, 0, 0.1)" %}
-    {% endif %}
+    {% assign main_content_bg_color = "transparent" %}
   {% endif %}
 
   {% if main_content_bg_color_data == nil %}
-    {% if front_page %}
-      {% assign main_content_bg_color_data_str = '{"r": 0, "g": 0, "b": 0, "a": 0.1, "lightness": 0}' %}
-    {% else %}
-      {% assign main_content_bg_color_data_str = '{"r": 0, "g": 0, "b": 0, "a": 0.1, "lightness": 0}' %}
-    {% endif %}
+    {% assign main_content_bg_color_data_str = '{"r": 0, "g": 0, "b": 0, "a": 0, "lightness": 0}' %}
   {% else %}
     {% assign main_content_bg_color_data_str = main_content_bg_color_data | json %}
   {% endif %}
@@ -107,37 +91,21 @@
   {% endif %}
 
   {% if half_content_bg_1_image == nil %}
-    {% if front_page %}
-      {% assign half_content_bg_1_image = images_path | append: "/front-header-bg_block.jpg" %}
-    {% else %}
-      {% assign half_content_bg_1_image = images_path | append: "/page-header-bg_block.jpg" %}
-    {% endif %}
+    {% assign half_content_bg_1_image = images_path | append: "/half-content-bg-1.jpg" %}
   {% endif %}
 
   {% if half_content_bg_1_image_sizes == nil %}
-    {% if front_page %}
-      {% assign half_content_bg_1_image_sizes_str = '[{"url":"' | append: images_path | append: '/front-header-bg.jpg", "width":2560, "height":1702}, {"url":"' | append: images_path | append: '/front-header-bg_huge.jpg", "width":2048, "height":1362}, {"url":"' | append: images_path | append: '/front-header-bg_large.jpg", "width":1280, "height":851}]' %}
-    {% else %}
-      {% assign half_content_bg_1_image_sizes_str = '[{"url":"' | append: images_path | append: '/page-header-bg.jpg", "width":2560, "height":1707}, {"url":"' | append: images_path | append: '/page-header-bg_huge.jpg", "width":2048, "height":1366}, {"url":"' | append: images_path | append: '/page-header-bg_large.jpg", "width":1280, "height":853}]' %}
-    {% endif %}
+    {% assign half_content_bg_1_image_sizes_str = '[{"url":"' | append: images_path | append: '/half-content-bg-1.jpg", "width":2560, "height":1702}, {"url":"' | append: images_path | append: '/half-content-bg-1_huge.jpg", "width":2048, "height":1362}, {"url":"' | append: images_path | append: '/half-content-bg-1_large.jpg", "width":1280, "height":851}]' %}
   {% else %}
     {% assign half_content_bg_1_image_sizes_str = half_content_bg_1_image_sizes | json %}
   {% endif %}
 
   {% if half_content_bg_1_color == nil %}
-    {% if front_page %}
-      {% assign half_content_bg_1_color = "rgba(0, 0, 0, 0.1)" %}
-    {% else %}
-      {% assign half_content_bg_1_color = "rgba(0, 0, 0, 0.1)" %}
-    {% endif %}
+    {% assign half_content_bg_1_color = "transparent" %}
   {% endif %}
 
   {% if half_content_bg_1_color_data == nil %}
-    {% if front_page %}
-      {% assign half_content_bg_1_color_data_str = '{"r": 0, "g": 0, "b": 0, "a": 0.1, "lightness": 0}' %}
-    {% else %}
-      {% assign half_content_bg_1_color_data_str = '{"r": 0, "g": 0, "b": 0, "a": 0.1, "lightness": 0}' %}
-    {% endif %}
+    {% assign half_content_bg_1_color_data_str = '{"r": 0, "g": 0, "b": 0, "a": 0, "lightness": 0}' %}
   {% else %}
     {% assign half_content_bg_1_color_data_str = half_content_bg_1_color_data | json %}
   {% endif %}
@@ -176,37 +144,21 @@
   {% endif %}
 
   {% if half_content_bg_2_image == nil %}
-    {% if front_page %}
-      {% assign half_content_bg_2_image = images_path | append: "/front-header-bg_block.jpg" %}
-    {% else %}
-      {% assign half_content_bg_2_image = images_path | append: "/page-header-bg_block.jpg" %}
-    {% endif %}
+    {% assign half_content_bg_2_image = images_path | append: "/half-content-bg-2.jpg" %}
   {% endif %}
 
   {% if half_content_bg_2_image_sizes == nil %}
-    {% if front_page %}
-      {% assign half_content_bg_2_image_sizes_str = '[{"url":"' | append: images_path | append: '/front-header-bg.jpg", "width":2560, "height":1702}, {"url":"' | append: images_path | append: '/front-header-bg_huge.jpg", "width":2048, "height":1362}, {"url":"' | append: images_path | append: '/front-header-bg_large.jpg", "width":1280, "height":851}]' %}
-    {% else %}
-      {% assign half_content_bg_2_image_sizes_str = '[{"url":"' | append: images_path | append: '/page-header-bg.jpg", "width":2560, "height":1707}, {"url":"' | append: images_path | append: '/page-header-bg_huge.jpg", "width":2048, "height":1366}, {"url":"' | append: images_path | append: '/page-header-bg_large.jpg", "width":1280, "height":853}]' %}
-    {% endif %}
+    {% assign half_content_bg_2_image_sizes_str = '[{"url":"' | append: images_path | append: '/half-content-bg-2.jpg", "width":2560, "height":1702}, {"url":"' | append: images_path | append: '/half-content-bg-2_huge.jpg", "width":2048, "height":1362}, {"url":"' | append: images_path | append: '/half-content-bg-2_large.jpg", "width":1280, "height":851}]' %}
   {% else %}
     {% assign half_content_bg_2_image_sizes_str = half_content_bg_2_image_sizes | json %}
   {% endif %}
 
   {% if half_content_bg_2_color == nil %}
-    {% if front_page %}
-      {% assign half_content_bg_2_color = "rgba(0, 0, 0, 0.1)" %}
-    {% else %}
-      {% assign half_content_bg_2_color = "rgba(0, 0, 0, 0.1)" %}
-    {% endif %}
+    {% assign half_content_bg_2_color = "transparent" %}
   {% endif %}
 
   {% if half_content_bg_2_color_data == nil %}
-    {% if front_page %}
-      {% assign half_content_bg_2_color_data_str = '{"r": 0, "g": 0, "b": 0, "a": 0.1, "lightness": 0}' %}
-    {% else %}
-      {% assign half_content_bg_2_color_data_str = '{"r": 0, "g": 0, "b": 0, "a": 0.1, "lightness": 0}' %}
-    {% endif %}
+    {% assign half_content_bg_2_color_data_str = '{"r": 0, "g": 0, "b": 0, "a": 0, "lightness": 0}' %}
   {% else %}
     {% assign half_content_bg_2_color_data_str = half_content_bg_2_color_data | json %}
   {% endif %}
@@ -245,37 +197,21 @@
   {% endif %}
 
   {% if half_content_bg_3_image == nil %}
-    {% if front_page %}
-      {% assign half_content_bg_3_image = images_path | append: "/front-header-bg_block.jpg" %}
-    {% else %}
-      {% assign half_content_bg_3_image = images_path | append: "/page-header-bg_block.jpg" %}
-    {% endif %}
+    {% assign half_content_bg_3_image = images_path | append: "/half-content-bg-3.jpg" %}
   {% endif %}
 
   {% if half_content_bg_3_image_sizes == nil %}
-    {% if front_page %}
-      {% assign half_content_bg_3_image_sizes_str = '[{"url":"' | append: images_path | append: '/front-header-bg.jpg", "width":2560, "height":1702}, {"url":"' | append: images_path | append: '/front-header-bg_huge.jpg", "width":2048, "height":1362}, {"url":"' | append: images_path | append: '/front-header-bg_large.jpg", "width":1280, "height":851}]' %}
-    {% else %}
-      {% assign half_content_bg_3_image_sizes_str = '[{"url":"' | append: images_path | append: '/page-header-bg.jpg", "width":2560, "height":1707}, {"url":"' | append: images_path | append: '/page-header-bg_huge.jpg", "width":2048, "height":1366}, {"url":"' | append: images_path | append: '/page-header-bg_large.jpg", "width":1280, "height":853}]' %}
-    {% endif %}
+    {% assign half_content_bg_3_image_sizes_str = '[{"url":"' | append: images_path | append: '/half-content-bg-3.jpg", "width":2560, "height":1702}, {"url":"' | append: images_path | append: '/half-content-bg-3_huge.jpg", "width":2048, "height":1362}, {"url":"' | append: images_path | append: '/half-content-bg-3_large.jpg", "width":1280, "height":851}]' %}
   {% else %}
     {% assign half_content_bg_3_image_sizes_str = half_content_bg_3_image_sizes | json %}
   {% endif %}
 
   {% if half_content_bg_3_color == nil %}
-    {% if front_page %}
-      {% assign half_content_bg_3_color = "rgba(0, 0, 0, 0.1)" %}
-    {% else %}
-      {% assign half_content_bg_3_color = "rgba(0, 0, 0, 0.1)" %}
-    {% endif %}
+    {% assign half_content_bg_3_color = "transparent" %}
   {% endif %}
 
   {% if half_content_bg_3_color_data == nil %}
-    {% if front_page %}
-      {% assign half_content_bg_3_color_data_str = '{"r": 0, "g": 0, "b": 0, "a": 0.1, "lightness": 0}' %}
-    {% else %}
-      {% assign half_content_bg_3_color_data_str = '{"r": 0, "g": 0, "b": 0, "a": 0.1, "lightness": 0}' %}
-    {% endif %}
+    {% assign half_content_bg_3_color_data_str = '{"r": 0, "g": 0, "b": 0, "a": 0, "lightness": 0}' %}
   {% else %}
     {% assign half_content_bg_3_color_data_str = half_content_bg_3_color_data | json %}
   {% endif %}
@@ -314,37 +250,21 @@
   {% endif %}
 
   {% if half_content_bg_4_image == nil %}
-    {% if front_page %}
-      {% assign half_content_bg_4_image = images_path | append: "/front-header-bg_block.jpg" %}
-    {% else %}
-      {% assign half_content_bg_4_image = images_path | append: "/page-header-bg_block.jpg" %}
-    {% endif %}
+    {% assign half_content_bg_4_image = images_path | append: "/half-content-bg-4.jpg" %}
   {% endif %}
 
   {% if half_content_bg_4_image_sizes == nil %}
-    {% if front_page %}
-      {% assign half_content_bg_4_image_sizes_str = '[{"url":"' | append: images_path | append: '/front-header-bg.jpg", "width":2560, "height":1702}, {"url":"' | append: images_path | append: '/front-header-bg_huge.jpg", "width":2048, "height":1362}, {"url":"' | append: images_path | append: '/front-header-bg_large.jpg", "width":1280, "height":851}]' %}
-    {% else %}
-      {% assign half_content_bg_4_image_sizes_str = '[{"url":"' | append: images_path | append: '/page-header-bg.jpg", "width":2560, "height":1707}, {"url":"' | append: images_path | append: '/page-header-bg_huge.jpg", "width":2048, "height":1366}, {"url":"' | append: images_path | append: '/page-header-bg_large.jpg", "width":1280, "height":853}]' %}
-    {% endif %}
+    {% assign half_content_bg_4_image_sizes_str = '[{"url":"' | append: images_path | append: '/half-content-bg-4.jpg", "width":2560, "height":1702}, {"url":"' | append: images_path | append: '/half-content-bg-4_huge.jpg", "width":2048, "height":1362}, {"url":"' | append: images_path | append: '/half-content-bg-4_large.jpg", "width":1280, "height":851}]' %}
   {% else %}
     {% assign half_content_bg_4_image_sizes_str = half_content_bg_4_image_sizes | json %}
   {% endif %}
 
   {% if half_content_bg_4_color == nil %}
-    {% if front_page %}
-      {% assign half_content_bg_4_color = "rgba(0, 0, 0, 0.1)" %}
-    {% else %}
-      {% assign half_content_bg_4_color = "rgba(0, 0, 0, 0.1)" %}
-    {% endif %}
+    {% assign half_content_bg_4_color = "transparent" %}
   {% endif %}
 
   {% if half_content_bg_4_color_data == nil %}
-    {% if front_page %}
-      {% assign half_content_bg_4_color_data_str = '{"r": 0, "g": 0, "b": 0, "a": 0.1, "lightness": 0}' %}
-    {% else %}
-      {% assign half_content_bg_4_color_data_str = '{"r": 0, "g": 0, "b": 0, "a": 0.1, "lightness": 0}' %}
-    {% endif %}
+    {% assign half_content_bg_4_color_data_str = '{"r": 0, "g": 0, "b": 0, "a": 0, "lightness": 0}' %}
   {% else %}
     {% assign half_content_bg_4_color_data_str = half_content_bg_4_color_data | json %}
   {% endif %}
