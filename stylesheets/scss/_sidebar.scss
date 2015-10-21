@@ -1,20 +1,15 @@
 /* SIDEBAR */
 // Styling rules for the site's sidebar. These rules affect the entire site.
 
-// NB! Sidebar is not the part of the current template by default, but it can be easily included:
-// 1. Add "sidebar" component to the site's template components folder.
-// 2. Include the component into the appropriate place (or places) in the layout.
-// 3. Uncomment the "_sidebar.scss" partial in the "main.scss" file.
-// 4. Add the styling rules for the generated component.
 .sidebar {
   width: 100%;
   max-width: 198px;
   min-width: 198px;
   margin-right: 60px;
+  padding-top: 20px;
 }
 
 .sidebar-title {
-  text-transform: uppercase;
   line-height: 1.1;
   font-weight: 600;
   font-size: 30px;

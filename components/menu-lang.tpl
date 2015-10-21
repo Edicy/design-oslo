@@ -1,19 +1,19 @@
-<!-- Use this code if you want a select type language menu -->
-<select class="menu">
-  {% for language in site.languages %}
-    <option class="menu-item" value="{{ language.url }}" {% if language.selected? %}selected="selected"{% endif %}>{{ language.title }}</option>
-  {% endfor %}
-</select>
-{% if editmode %}<div class="edit-btn">{% languageadd %}</div>{% endif %}
-
-{% comment %}Use this code if you want a list type language menu{% endcomment %}
-{% comment %}
-<!--
-<ul class="menu">
-  {% for language in site.languages %}
-    <li><a class="lang-flag lang-flag-{{ language.code }}{% if language.selected? %} active{% endif %}" href="{{ language.url }}">{{ language.title }}</a></li>
-  {% endfor %}
-  {% if editmode %}<li class="edit-btn">{% languageadd %}</li>{% endif %}
-</ul>
--->
-{% endcomment %}
+<nav class="menu-lang js-prevent-sideclick{% if flags_state == true %} flags-enabled{% else %} flags-disabled{% endif %}">
+  <button class="lang-menu-btn js-lang-menu-btn js-popup-menu-btn lang-flag {% for language in site.languages %}{% if language.selected? %}lang-flag-{{ language.code }}{% endif %}{% endfor %}"></button>
+  <ol class="menu">
+    {% for language in site.languages %}
+      <li{% if language.selected? %} class="active"{% endif %}>
+        <a href="{{ language.url }}" class="lang-flag lang-flag-{{ language.code }}">{{ language.title }}</a>
+      </li>
+    {% endfor %}
+    {% if editmode %}
+      <li class="edit-btn">{% languageadd %}</li>
+      <li class="lang-options">
+        <button class="option-btn js-option-toggle-flags{% if flags_state == true %} js-flag-disable-btn{% endif %}">
+          <span class="disable-text">{{ "disable_lang_flags" | lc }}</span>
+          <span class="enable-text">{{ "enable_lang_flags" | lc }}</span>
+        </button>
+      </li>
+    {% endif %}
+  </ol>
+</nav>

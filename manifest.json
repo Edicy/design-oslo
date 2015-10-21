@@ -6,6 +6,20 @@
   "author": "Paavel Liik",
   "layouts": [
     {
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/front_page.tpl",
+      "layout_name": "page_front",
+      "title": "Front page"
+    },
+    {
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/common_page.tpl",
+      "layout_name": "page_default",
+      "title": "Common page"
+    },
+    {
       "content_type": "blog",
       "component": false,
       "file": "layouts/blog___news.tpl",
@@ -20,18 +34,11 @@
       "title": "Blog article"
     },
     {
-      "content_type": "page",
-      "component": false,
-      "file": "layouts/common_page.tpl",
-      "layout_name": "page_default",
-      "title": "Common page"
-    },
-    {
-      "content_type": "page",
-      "component": false,
-      "file": "layouts/front_page.tpl",
-      "layout_name": "page_front",
-      "title": "Front page"
+      "content_type": "component",
+      "component": true,
+      "file": "components/menu-lang-mobile.tpl",
+      "layout_name": "menu-lang-mobile",
+      "title": "menu-lang-mobile"
     },
     {
       "content_type": "component",
@@ -39,13 +46,6 @@
       "file": "components/bg-picker-variables.tpl",
       "layout_name": "bg-picker-variables",
       "title": "bg-picker-variables"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/bg-picker.tpl",
-      "layout_name": "bg-picker",
-      "title": "bg-picker"
     },
     {
       "content_type": "component",
@@ -85,9 +85,9 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/menu-lang-mobile.tpl",
-      "layout_name": "menu-lang-mobile",
-      "title": "menu-lang-mobile"
+      "file": "components/bg-picker-styles.tpl",
+      "layout_name": "bg-picker-styles",
+      "title": "bg-picker-styles"
     },
     {
       "content_type": "component",
@@ -162,6 +162,18 @@
   ],
   "assets": [
     {
+      "content_type": "image/svg+xml",
+      "file": "assets/menu-sub-arrow.svg",
+      "kind": "assets",
+      "filename": "menu-sub-arrow.svg"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/search-icon.svg",
+      "kind": "assets",
+      "filename": "search-icon.svg"
+    },
+    {
       "content_type": "application/javascript",
       "file": "javascripts/application.js",
       "kind": "javascripts",
@@ -196,6 +208,54 @@
       "file": "stylesheets/main.min.css",
       "kind": "stylesheets",
       "filename": "main.min.css"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "kind": "assets",
+      "file": "assets/ico-flags.svg",
+      "filename": "ico-flags.svg"
+    },
+    {
+      "content_type": "image/png",
+      "kind": "images",
+      "file": "images/ico-flags.png",
+      "filename": "ico-flags.png"
+    },
+    {
+      "content_type": "image/jpeg",
+      "kind": "images",
+      "file": "images/half-content-bg-1.jpg",
+      "filename": "half-content-bg-1.jpg"
+    },
+    {
+      "content_type": "image/jpeg",
+      "kind": "images",
+      "file": "images/half-content-bg-2.jpg",
+      "filename": "half-content-bg-2.jpg"
+    },
+    {
+      "content_type": "image/jpeg",
+      "kind": "images",
+      "file": "images/half-content-bg-3.jpg",
+      "filename": "half-content-bg-3.jpg"
+    },
+    {
+      "content_type": "image/jpeg",
+      "kind": "images",
+      "file": "images/half-content-bg-4.jpg",
+      "filename": "half-content-bg-4.jpg"
+    },
+    {
+      "content_type": "image/png",
+      "kind": "images",
+      "file": "images/ico-flags.png",
+      "filename": "ico-flags.png"
+    },
+    {
+      "content_type": "image/jpeg",
+      "kind": "images",
+      "file": "images/main-content-bg.jpg",
+      "filename": "main-content-bg.jpg"
     }
   ]
 }

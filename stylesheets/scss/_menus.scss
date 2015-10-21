@@ -78,14 +78,14 @@
 // Styling rules for the site's main menu.
 .menu-main {
   margin-top: 50px;
-  padding-top: 10px;
-  padding-bottom: 20px;
+  padding-top: 8px;
+  padding-bottom: 26px;
   @include border(top, 1px, solid, $black, 0.2);
   @include border(bottom, 1px, solid, $black, 0.2);
 
   .menu {
     .menu-item {
-      margin-top: 10px;
+      margin-top: 9px;
     }
 
     .menu-link {
@@ -107,210 +107,315 @@
   }
 
   .menu-sub {
-    margin-left: 20px;
-  }
+    padding-top: 7px;
+    padding-bottom: 12px;
 
-  .menu-lang {
-  }
+    .menu-link {
+      text-transform: none;
+      font-weight: normal;
+      padding-left: 20px;
+      position: relative;
 
-  @include query($tablet-2) {
-    display: none;
+      &:before {
+        content: '';
+        background: url('../assets/menu-sub-arrow.svg') no-repeat center;
+        background-size: contain;
+        width: 6px;
+        height: 9px;
+        position: absolute;
+        left: 5px;
+        top: 5px;
+        opacity: .5;
+      }
 
-    &.expanded {
-      position: absolute;
-      top: 75px;
-      right: 20px;
-      z-index: 1;
-      display: block;
-      min-width: 350px;
-      margin-bottom: 60px;
-      padding: 0;
-      text-align: left;
-      @include bg($white);
-      @include box-shadow(0, 0, 5px, rgba($black, 0.3));
-
-      .menu {
-        .menu-item {
-          .menu-link {
-            &.active {
-            }
-
-            &:hover {
-            }
-          }
-        }
-
-        .edit-btn {
+      &:hover {
+        &:before {
+          opacity: 1;
         }
       }
 
-      // Styling rules for the sub menu in the site's main menu. Only visible on smaller screens.
-      .menu-sub {
-        .menu {
-          .menu-item {
-            &:first-child {
-            }
-          }
+      &.active {
+        font-weight: bold;
+        border: none;
 
-          .menu-link {
-            &.active {
-            }
-          }
-        }
-      }
-
-      // Styling rules for the language menu in the site's main menu. Only visible on smaller screens.
-      .menu-lang {
-        display: block;
-        margin-top: 0;
-        @include border(top, 1px, solid, $primary-color, 0.2);
-
-        .menu-item {
-          .menu-link {
-            position: relative;
-            padding: 14px 20px 14px 50px;
-            font-size: 12px;
-            @include color($secondary-color);
-
-            &, &.active {
-              &:hover {
-                @include bg($grey-2, 0.1);
-              }
-            }
-
-            &.active {
-              @include color($grey-2);
-              background: none;
-            }
-
-            &.lang-flag:before,
-            &.lang-flag:after {
-              position: absolute;
-              top: 14px;
-              left: 20px;
-              display: block;
-              width: 20px;
-              height: 13px;
-              content: '';
-            }
-
-            &.lang-flag:before {
-              @include bg($black);
-            }
-
-            &.lang-flag:after {
-              opacity: 0.95;
-              background-size: 200px;
-              background-repeat: no-repeat;
-
-              .no-svg & {
-                background-image: url('../images/ico-flags.png');
-              }
-
-              .svg & {
-                background-image: url('../assets/ico-flags.svg');
-              }
-            }
-
-            &.edy-menu-langadd {
-              padding-left: 20px;
-            }
-          }
-
+        &:before {
+          opacity: 1;
         }
       }
     }
-  }
 
-  @include query($mobile-1) {
-    &.expanded {
-      min-width: 100%;
-      right: 0;
-      left: 0;
-      margin: 0 0 60px;
-      @include border(top, 1px, solid, $primary-color, 0.2);
-      @include border(bottom, 1px, solid, $primary-color, 0.2);
-      @include no-box-shadow;
+    .edit-btn {
+      margin-left: 5px;
     }
   }
-}
 
-// Styling rules for the site's sub menu.
-.menu-sub {
-  .menu {
+  .menu-third {
+    padding-top: 4px;
+    padding-bottom: 4px;
 
     .menu-item {
-      .menu-link {
-        &.untranslated {
-        }
+      margin-top: 5px;
+    }
 
-        &.active {
-        }
+    .menu-link {
+      font-size: 14px;
+      font-weight: normal;
+      padding-left: 28px;
+      @include color($grey-1);
 
-        &:hover {
-        }
+      &.active {
+        font-weight: bold;
+        border: none;
+        @include color($secondary-color);
       }
+
+      &:hover {
+        @include color($secondary-color);
+      }
+
+      &:before {
+        content: none;
+      }
+    }
+
+    .edit-btn {
+      margin-left: 28px;
     }
   }
 }
 
 // Styling rules for the site's language menu.
 .menu-lang {
-  .menu {
+  font-size: 14px;
+  margin: 38px 0 28px;
+
+  a {
+    display: block;
+    @include color($grey-1);
+
+    &:hover {
+      @include color($secondary-color);
+    }
+  }
+
+  .active a {
+    @include color($secondary-color);
+  }
+
+  &.flags-enabled {
+    position: relative;
+
+    .menu {
+      position: absolute;
+      top: 100%;
+      background: white;
+      margin-top: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      display: none;
+
+      .lang-menu-open & {
+        display: block;
+      }
+    }
+
+    li {
+      padding: 7px 10px;
+
+      &.active {
+        display: none;
+      }
+    }
+
+    .lang-flag {
+      font-size: 0;
+      height: 15px;
+      width: 21px;
+    }
+  }
+}
+
+.lang-menu-btn {
+  font-family: inherit;
+  font-size: 12px;
+  position: relative;
+  display: block;
+  height: 15px;
+  margin: 0 10px;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  background: none;
+
+  .flags-enabled & {
+    width: 21px;
+
+    .lang-title {
+      display: none;
+    }
+  }
+
+  .lang-flag {
+    &:before,
+    &:after {
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .lang-title-inner {
+    vertical-align: middle;
+  }
+
+  .flags-disabled & {
+    display: none;
+  }
+}
+
+/* flags */
+.lang-flag {
+  position: relative;
+
+  &:before,
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 21px;
+    height: 15px;
+    content: '';
+
+    .flags-disabled & {
+      display: none;
+    }
+  }
+
+  &:after {
+    background-position: -189px -60px;
+  }
+}
+
+.lang-flag:before {
+  background-color: rgba($black, 1);
+}
+
+.lang-flag:after {
+  opacity: .95;
+  background-repeat: no-repeat;
+  .no-boxshadow & {
+    border: 1px solid $white;
+  }
+  .svg & {
+    background-image: url('../assets/ico-flags.svg');
+  }
+  .no-svg {
+    background-image: url('../images/ico-flags.png');
   }
 }
 
 // Language flag icons positioning in the spritemap.
 $flags:
-(sq,   0        0),
-(hy,  -20px     0),
-(bn,  -40px     0),
-(pt,  -60px     0),
-(bg,  -80px     0),
-(zh, -100px     0),
-(hr, -120px     0),
-(da, -140px     0),
-(cs, -160px     0),
-(et, -180px     0),
+(sq, 0 0), // Albanian (Albania)
+(hy, -21px 0), // Armenian (Armenia)
+(bn, -42px 0), // Bengali (Bangladesh)
+// (xx, -63px 0), // Brazilian Portuguese (Brazil)
+(bg, -84px 0), // Bulgarian (Bulgaria)
+(zh, -105px 0), // Chinese (China)
+(hr, -126px 0), // Croatian (Croatia)
+(da, -147px 0), // Danish (Denmark)
+(cs, -168px 0), // Czech (Czech Republic)
+(et, -189px 0), // Estonian (Estonia)
 
-(fi,    0px -14px),
-(fr,  -20px -14px),
-(ka,  -40px -14px),
-(de,  -60px -14px),
-(el,  -80px -14px),
-(hu, -100px -14px),
-(is, -120px -14px),
-(hi, -140px -14px),
-(id, -160px -14px),
-(fa, -180px -14px),
+(fi, 0 -15px), // Finnish (Finland)
+(fr, -21px -15px), // French (France)
+(ka, -42px -15px), // Georgian (Georgia)
+(de, -63px -15px), // German (Germany)
+(el, -84px -15px), // Greek (Greece)
+(hu, -105px -15px), // Hungarian (Hungary)
+(is, -126px -15px), // Icelandic (Iceland)
+(hi, -147px -15px), // Hindi (India)
+(id, -168px -15px), // Indonesian (Indonesia)
+(fa, -189px -15px), // Iranian (Iran)
 
-(he,    0px -28px),
-(it,  -20px -28px),
-(ja,  -40px -28px),
-(ko,  -60px -28px),
-(lv,  -80px -28px),
-(lt, -100px -28px),
-(ms, -120px -28px),
-(nl, -140px -28px),
-(no, -160px -28px),
-(ur, -180px -28px),
+(he, 0 -30px), // Hebrew (Israel)
+(it, -21px -30px), // Italian (Italy)
+(ja, -42px -30px), // Japanese (Japan)
+(ko, -63px -30px), // Korean (Korea, South)
+(lv, -84px -30px), // Latvian (Latvia)
+(lt, -105px -30px), // Lithuanian (Lithuania)
+(ms, -126px -30px), // Malaysian (Malaysia)
+(nl, -147px -30px), // Dutch (Netherlands)
+(no, -168px -30px), // Norwegian (Norway)
+(ur, -189px -30px), // Urdu (Pakistan)
 
-(fil,   0px -42px),
-(pl,  -20px -42px),
-(ro,  -40px -42px),
-(ru,  -60px -42px),
-(ar,  -80px -42px),
-(sk, -100px -42px),
-(sl, -120px -42px),
-(es, -140px -42px),
-(sv, -160px -42px),
-(tr, -180px -42px),
-(uk,    0px -56px),
-(en,  -20px -56px)
+(fil, 0 -45px), // Filipino (Philippines)
+(pl, -21px -45px), // Polish (Poland)
+(ro, -42px -45px), // Romanian (Romania)
+(ru, -63px -45px), // Russian (Russia)
+(ar, -84px -45px), // Arabic (Saudi Arabia)
+(sk, -105px -45px), // Slovakian (Slovakia)
+(sl, -126px -45px), // Slovenian (Slovenia)
+(es, -147px -45px), // Spanish (Spain)
+(sv, -168px -45px), // Swedish (Sweden)
+(tr, -189px -45px), // Turkish (Turkey)
+
+(uk, 0 -60px), // Ukrainian (Ukraine)
+(en, -21px -60px), // American English (United States of America)
+// (xx, -42px -60px), // French (Ivory Coast)
+(en-gb, -63px -60px), // British English (Great Britian)
+(pt, -84px -60px), // Portuguese (Portuguese Republic)
+// (xx, -105px, -60px), // Canadian English (Canada)
+(sr, -126px, -60px), // Serbian (Republic of Serbia)
+// (xx, -147px, -60px), // Dutch, French, German (Kingdom of Belgium)
+// (xx, -168px, -60px), // Australian English (Commonwealth of Australia)
 ;
 
 @each $flag, $pos in $flags {
-  .lang-flag-#{$flag}:after { background-position: $pos; }
+  .lang-flag-#{$flag}:after {
+    background-position: $pos;
+  }
+}
+
+.lang-options {
+  background-color: rgba($black, .09);
+  font-size: 13px;
+  padding: 7px 12px;
+}
+
+.option-btn {
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  color: rgba($blue, 1);
+  border: none;
+  background: none;
+
+  &:hover {
+    color: rgba($blue, .8);
+  }
+
+  &::-moz-focus-inner {
+    padding: 0;
+    border: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  .flags-disabled & {
+    .disable-text {
+      display: none;
+    }
+  }
+
+  .flags-enabled & {
+    .enable-text {
+      display: none;
+    }
+  }
 }
 
 // Styling rules for the site's blog article tags menu. These rules affects both - the blog article listing view and the single blog article view.

@@ -1,22 +1,20 @@
 /* SEARCH */
 // Styling rules for the site's search box. These rules affect the entire site.
-.search,
-.search-left,
-.search-right {
-}
-
 .search {
+  margin: 41px 0 0;
 }
 
-.search-mobile {
-}
-
-.search-left {
-  .search-input {
-  }
-}
-
-.search-right {
-  .search-submit {
+.search-input {
+  width: 100%;
+  border: 1px solid $grey-2;
+  font: inherit;
+  font-size: 14px;
+  box-sizing: border-box;
+  padding: 9px 10px 9px 38px;
+  background: url('../assets/search-icon.svg') no-repeat 12px 12px;
+  @include color($grey-1);
+  @include placeholder {
+    opacity: 1;
+    color: inherit;
   }
 }

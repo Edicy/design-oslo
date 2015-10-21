@@ -25,6 +25,7 @@ module.exports = function(grunt) {
         src: [
           'bower_components/jquery/dist/jquery.js',
           'bower_components/overthrow/src/overthrow-polyfill.js',
+          'javascripts/src/colorextract.js',
           'javascripts/src/concat/*.js'
         ],
         dest: 'javascripts/application.js'

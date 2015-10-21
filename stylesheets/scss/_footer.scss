@@ -1,4 +1,11 @@
 /* FOOTER */
 // Styling rules for the site's footer. These rules affect the entire site.
 .footer {
+  font-size: 13px;
+  text-align: right;
+  margin-top: 20px;
+
+  a {
+    @include color($grey-3);
+  }
 }

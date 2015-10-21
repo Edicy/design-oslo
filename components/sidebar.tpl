@@ -3,11 +3,13 @@
 
   <nav class="menu-main js-menu-main js-popover">
     {% include "menu-level-1" %}
-
-    {% if editmode or site.has_many_languages? %}
-      <div class="menu-lang">
-        {% include "menu-lang" %}
-      </div>
-    {% endif %}
   </nav>
+
+  {% if editmode or site.has_many_languages? %}
+    {% include "menu-lang" %}
+  {% endif %}
+
+  <div class="content-formatted">{% xcontent name="footer" %}</div>
+
+  {% if site.search.enabled %}{% include "search" %}{% endif %}
 </aside>
