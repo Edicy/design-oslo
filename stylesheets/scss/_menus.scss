@@ -425,13 +425,27 @@ $flags:
 }
 
 .menu-tags {
+  padding-left: 12px;
+  background: url('../assets/ico-tags.svg?1') no-repeat left 3px;
+
   .menu {
     .menu-item {
+      display: inline-block;
+      margin-left: 15px;
+
       .menu-link {
+        text-transform: uppercase;
+        font-family: $font_family_secondary;
+        color: $grey-1;
+        font-size: 13px;
+
         &:hover {
+          color: $secondary-color;
         }
 
         &.active {
+          color: $secondary-color;
+          font-weight: bold;
         }
       }
     }

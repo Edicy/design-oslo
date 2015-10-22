@@ -69,8 +69,10 @@
 
   a {
     @include color($secondary-color);
+    text-decoration: underline;
 
     &:hover {
+      text-decoration: none;
     }
   }
 

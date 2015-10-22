@@ -11,6 +11,7 @@
       {% include "sidebar" %}
 
       <main class="content" role="main">
+        {% editable article.tags %}
         {% include "post-box" with "article" %}
 
         <section id="comments" class="comments content-formatted">

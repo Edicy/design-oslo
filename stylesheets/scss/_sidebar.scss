@@ -19,6 +19,10 @@
     @include color($secondary-color);
   }
 
+  a {
+    text-decoration: none;
+  }
+
   a:hover {
     @include color($secondary-color,.8);
   }

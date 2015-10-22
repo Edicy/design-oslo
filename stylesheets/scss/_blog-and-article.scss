@@ -1,26 +1,55 @@
 /* BLOG & BLOG ARTICLE */
 // Styling rules for both - the blog listing view and the blog single article view
 .post {
+  margin: 45px 0;
+
   .post-header {
   }
 
   .post-title {
+    margin: 10px 0 15px;
 
     &, a {
 
     }
 
     a {
+      text-decoration: none;
+
       &:hover {
 
       }
     }
   }
 
+  .post-meta {
+    font-size: 13px;
+    text-transform: uppercase;
+  }
+
   .post-date {
+    display: inline-block;
+    color: $grey-5;
+    background: $grey-6;
+    padding: 3px 8px;
+  }
+
+  .post-comments-count {
+    display: inline-block;
+    background: url('../assets/ico-comments.svg') no-repeat left center;
+    padding-left: 30px;
+    margin-left: 15px;
+    color: $grey-1;
+
+    &:hover {
+      color: $secondary-color;
+    }
   }
 
   .post-author {
+    text-transform: none;
+    display: inline-block;
+    margin-left: 15px;
   }
 
   .post-content {
@@ -31,19 +60,18 @@
     }
   }
 
-  .post-footer {
-  }
-
-  .post-comments-count {
-    a {
-      &:hover {
-      }
-    }
+  .post-read-more {
+    display: inline-block;
+    margin-top: 20px;
   }
 }
 
 // Style rules for the blog listing view only
 .blog-page {
+  .content {
+    padding-top: 20px;
+  }
+
   .post {
   }
 }

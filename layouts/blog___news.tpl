@@ -11,6 +11,8 @@
       {% include "sidebar" %}
 
       <main class="content" role="main">
+        {% include "tags-blog" %}
+
         {% addbutton %}
         {% for article in articles %}
           {% include "post-box" %}
@@ -22,20 +24,7 @@
   </div>
 
   {% include "javascripts" %}
-  {% include "bg-picker" %}
   <script>
-    $(document).ready(function() {
-      currentUrl = window.location.href;
-      blogUrl = "{{ site.url }}{{ page.path }}";
-      if (currentUrl === blogUrl) {
-        $(".js-tags-all").addClass("active");
-      };
-    });
-
-    {% unless body_image == nil or body_image == '' %}
-      $.backstretch('{{ body_image }}');
-    {% endunless %}
-
     site.initBlogPage();
   </script>
 </body>

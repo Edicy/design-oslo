@@ -1,20 +1,21 @@
-<article class="post">
+<article class="post content-formatted">
   <header class="post-header">
-    <h2 class="post-title">{% if post-box == "article" %}{% editable article.title %}{% else %}<a href="{{ article.url }}">{{ article.title }}</a>{% endif %}</h2>
-    <time class="post-date" datetime="{{ article.created_at | date : "%Y-%m-%d" }}">{{ article.created_at | format_date : "long" }}</time>
-    <div class="post-author">{{ article.author.name }}</div>
+    <div class="post-meta">
+      <time class="post-date" datetime="{{ article.created_at | date : "%Y-%m-%d" }}">{{ article.created_at | format_date : "short" }}</time>
+      {% if article.comments_count > 0 %}
+        <a href="{{ article.url }}#comments" class="post-comments-count">{{ "comments_for_count" | lc}}: {{ article.comments_count }}</a>
+      {% endif %}
+      <span class="post-author">{{ article.author.name }}</span>
+    </div>
+    <h1 class="post-title">{% if post-box == "article" %}{% editable article.title %}{% else %}<a href="{{ article.url }}">{{ article.title }}</a>{% endif %}</h1>
   </header>
 
   <div class="post-content">
     <div class="post-excerpt content-formatted">{% if post-box == "article" %}{% editable article.excerpt %}{% else %}{{ article.excerpt }}{% endif %}</div>
-    {% if post-box == "article" %}<div class="post-body content-formatted">{% editable article.body %}</div>{% endif %}
+    {% if post-box == "article" %}
+      <div class="post-body content-formatted">{% editable article.body %}</div>
+    {% else %}
+      <a href="{{ article.url }}" class="post-read-more">{{ "read_more" | lc }}</a>
+    {% endif %}
   </div>
-
-  <footer class="post-footer">
-    {% unless post-box == "article" %}
-      <div class="post-comments-count">
-        <a href="{{ article.url }}#comments">{% case article.comments_count %}{% when 0 %}{{ "no_comments" | lc }}{% else %}{{ "comments_for_count" | lc}}: <span class="edy-site-blog-comments-count">{{ article.comments_count }}</span>{% endcase %}</a>
-      </div>
-    {% endunless %}
-  </footer>
 </article>
