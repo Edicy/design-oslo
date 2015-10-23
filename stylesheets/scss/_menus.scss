@@ -418,10 +418,8 @@ $flags:
   }
 }
 
-// Styling rules for the site's blog article tags menu. These rules affects both - the blog article listing view and the single blog article view.
-// By default the tags menu shares the same style with the sub menu.
-// To add custom styles remove the ".menu-sub" class from the "tags-blog" and "tags-post" components and write the custom style below.
-.tags-title {
+.tags {
+  margin: 50px 0;
 }
 
 .menu-tags {
@@ -431,13 +429,15 @@ $flags:
   .menu {
     .menu-item {
       display: inline-block;
-      margin-left: 15px;
+      margin: 0 0 0 15px;
+      padding: 0;
 
       .menu-link {
         text-transform: uppercase;
         font-family: $font_family_secondary;
         color: $grey-1;
         font-size: 13px;
+        text-decoration: none;
 
         &:hover {
           color: $secondary-color;
@@ -447,6 +447,10 @@ $flags:
           color: $secondary-color;
           font-weight: bold;
         }
+      }
+
+      &:before {
+        content: none;
       }
     }
   }

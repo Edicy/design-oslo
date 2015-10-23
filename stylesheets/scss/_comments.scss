@@ -4,7 +4,30 @@
 .comments {
 }
 
-.comment-title,
-.comment,
+.comments-title {
+}
+
+.comment-messages {
+  margin-top: 20px;
+}
+
+.comment {
+  margin-bottom: 30px;
+}
+
 .comment-form {
+  width: 360px;
+  margin-top: 40px;
+
+  .form_field_textfield {
+    width: 100%;
+  }
+}
+
+.comment-date {
+  color: $grey-5;
+}
+
+.comment-body {
+  margin-top: 10px;
 }

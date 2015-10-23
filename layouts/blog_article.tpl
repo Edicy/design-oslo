@@ -11,23 +11,25 @@
       {% include "sidebar" %}
 
       <main class="content" role="main">
-        {% editable article.tags %}
         {% include "post-box" with "article" %}
 
         <section id="comments" class="comments content-formatted">
           {% if article.comments_count > 0 %}
-            <h2 class="comments-title">{{ "comments_for_count" | lc }}: <span class="edy-site-blog-comments-count">{{ article.comments_count }}</span></h2>
+            <h2 class="comments-title">{{ "comments_for_count" | lc }} <span class="edy-site-blog-comments-count">({{ article.comments_count }})</span></h2>
 
             <div class="comment-messages content-formatted">
               {% for comment in article.comments reversed %}
                 <div class="comment edy-site-blog-comment">
-                  <span class="comment-body">{{ comment.body_html }}</span>
-                  <span class="comment-author">({{ comment.author }},</span>
-                  <span class="comment-date">{{ comment.created_at | format_date: "long" }})</span>
-                  <span class="comment-delete">{% removebutton %}</span>
+                  <strong class="comment-author">{{ comment.author }}</strong>
+                  ·
+                  <span class="comment-date">{{ comment.created_at | format_date: "long" }}</span>
+                  <p class="comment-body">{{ comment.body_html }}</p>
+                  {% if editmode %}<span class="comment-delete">{% removebutton %}</span>{% endif %}
                 </div>
               {% endfor %}
             </div>
+          {% else %}
+            <h2 class="comments-title">{{ "no_comments" | lc }}</h2>
           {% endif %}
 
           {% include "comment-form" %}
