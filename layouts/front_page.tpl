@@ -99,7 +99,7 @@
             Site.bgPickerPreview($button.parent(), data, picker);
           },
           commit: function(data) {
-            Site.bgPickerCommit($button.data('bg-key'), data, 'contentPage', picker);
+            Site.bgPickerCommit($button.data('bg-key'), data, picker);
           }
         });
       });

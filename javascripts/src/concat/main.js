@@ -105,26 +105,14 @@
   };
 
   // Header background image and color save logic function.
-  var bgPickerCommit = function(dataBgKey, data, pageType, bgPicker) {
+  var bgPickerCommit = function(dataBgKey, data, bgPicker) {
     var commitData = $.extend(true, {}, data);
     commitData.image = data.image || '';
     commitData.imageSizes = data.imageSizes || '';
     commitData.color = data.color || '';
     commitData.combinedLightness = bgPicker.bgPickerCombinedLightness;
 
-    if (pageType === 'articlePage') {
-      if (dataBgKey == 'footer_bg') {
-        siteData.set(dataBgKey, commitData);
-      } else {
-        Edicy.articles.currentArticle.setData(dataBgKey, commitData);
-      }
-    } else {
-      if (pageType === 'contentPage' && (dataBgKey === 'footer_bg') || (dataBgKey === 'body_bg')) {
-        siteData.set(dataBgKey, commitData);
-      } else {
-        pageData.set(dataBgKey, commitData);
-      }
-    }
+    pageData.set(dataBgKey, commitData);
   };
 
   var colorSum = function(bgColor, fgColor) {
