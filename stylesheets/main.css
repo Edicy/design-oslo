@@ -18,7 +18,7 @@ body {
   color: #404040;
 }
 
-.content-formatted:after {
+.content-formatted:after, .voog-search-modal:after {
   content: "";
   display: table;
   clear: both;
@@ -88,43 +88,43 @@ body {
   margin-top: 0;
 }
 
-.content-formatted {
+.content-formatted, .voog-search-modal {
   word-wrap: break-word;
 }
-.content-formatted h1, .content-formatted h2, .content-formatted h3, .content-formatted h4, .content-formatted h5, .content-formatted h6, .content-formatted p, .content-formatted ul, .content-formatted ol, .content-formatted pre, .content-formatted code, .content-formatted img, .content-formatted iframe, .content-formatted table form {
+.content-formatted h1, .voog-search-modal h1, .content-formatted h2, .voog-search-modal h2, .content-formatted h3, .voog-search-modal h3, .content-formatted h4, .voog-search-modal h4, .content-formatted h5, .voog-search-modal h5, .content-formatted h6, .voog-search-modal h6, .content-formatted p, .voog-search-modal p, .content-formatted ul, .voog-search-modal ul, .content-formatted ol, .voog-search-modal ol, .content-formatted pre, .voog-search-modal pre, .content-formatted code, .voog-search-modal code, .content-formatted img, .voog-search-modal img, .content-formatted iframe, .voog-search-modal iframe, .content-formatted table form, .voog-search-modal table form {
   margin-bottom: 0;
 }
-.content-formatted h1:first-child, .content-formatted h2:first-child, .content-formatted h3:first-child, .content-formatted h4:first-child, .content-formatted h5:first-child, .content-formatted h6:first-child, .content-formatted p:first-child, .content-formatted ul:first-child, .content-formatted ol:first-child, .content-formatted pre:first-child, .content-formatted code:first-child, .content-formatted img:first-child, .content-formatted iframe:first-child, .content-formatted table form:first-child {
+.content-formatted h1:first-child, .voog-search-modal h1:first-child, .content-formatted h2:first-child, .voog-search-modal h2:first-child, .content-formatted h3:first-child, .voog-search-modal h3:first-child, .content-formatted h4:first-child, .voog-search-modal h4:first-child, .content-formatted h5:first-child, .voog-search-modal h5:first-child, .content-formatted h6:first-child, .voog-search-modal h6:first-child, .content-formatted p:first-child, .voog-search-modal p:first-child, .content-formatted ul:first-child, .voog-search-modal ul:first-child, .content-formatted ol:first-child, .voog-search-modal ol:first-child, .content-formatted pre:first-child, .voog-search-modal pre:first-child, .content-formatted code:first-child, .voog-search-modal code:first-child, .content-formatted img:first-child, .voog-search-modal img:first-child, .content-formatted iframe:first-child, .voog-search-modal iframe:first-child, .content-formatted table form:first-child, .voog-search-modal table form:first-child {
   margin-top: 0;
 }
-.content-formatted h1, .content-formatted h2, .content-formatted h3, .content-formatted h4, .content-formatted h5, .content-formatted h6 {
+.content-formatted h1, .voog-search-modal h1, .content-formatted h2, .voog-search-modal h2, .content-formatted h3, .voog-search-modal h3, .content-formatted h4, .voog-search-modal h4, .content-formatted h5, .voog-search-modal h5, .content-formatted h6, .voog-search-modal h6 {
   font-family: "Raleway", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-weight: 400;
 }
-.content-formatted h1 {
+.content-formatted h1, .voog-search-modal h1 {
   font-size: 38px;
   color: #222222;
 }
-.content-formatted h2, .content-formatted h3, .content-formatted h4, .content-formatted h5, .content-formatted h6 {
+.content-formatted h2, .voog-search-modal h2, .content-formatted h3, .voog-search-modal h3, .content-formatted h4, .voog-search-modal h4, .content-formatted h5, .voog-search-modal h5, .content-formatted h6, .voog-search-modal h6 {
   color: #1d1d1d;
 }
-.content-formatted h2 {
+.content-formatted h2, .voog-search-modal h2 {
   margin-top: 65px;
   font-size: 24px;
 }
-.content-formatted h3, .content-formatted h4, .content-formatted h5, .content-formatted h6 {
+.content-formatted h3, .voog-search-modal h3, .content-formatted h4, .voog-search-modal h4, .content-formatted h5, .voog-search-modal h5, .content-formatted h6, .voog-search-modal h6 {
   font-size: 20px;
 }
-.content-formatted ul {
+.content-formatted ul, .voog-search-modal ul {
   list-style-type: none;
   padding: 0;
 }
-.content-formatted ul li {
+.content-formatted ul li, .voog-search-modal ul li {
   position: relative;
   padding-left: 25px;
   margin: 15px 0;
 }
-.content-formatted ul li:before {
+.content-formatted ul li:before, .voog-search-modal ul li:before {
   content: '°';
   position: absolute;
   left: 7px;
@@ -132,48 +132,48 @@ body {
   font-size: 20px;
   color: #B4B4B4;
 }
-.content-formatted a {
+.content-formatted a, .voog-search-modal a {
   color: #222222;
   text-decoration: underline;
 }
-.content-formatted a:hover {
+.content-formatted a:hover, .voog-search-modal a:hover {
   text-decoration: none;
 }
-.content-formatted img {
+.content-formatted img, .voog-search-modal img {
   height: auto;
 }
-.content-formatted .table-container {
+.content-formatted .table-container, .voog-search-modal .table-container {
   margin-top: 20px;
 }
-.content-formatted .overthrow {
+.content-formatted .overthrow, .voog-search-modal .overthrow {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
-.content-formatted table {
+.content-formatted table, .voog-search-modal table {
   width: 100%;
   margin: 20px 0;
   font-size: 16px;
   border-collapse: collapse;
 }
-.content-formatted table th, .content-formatted table td {
+.content-formatted table th, .voog-search-modal table th, .content-formatted table td, .voog-search-modal table td {
   padding: 10px;
   text-align: left;
   border-bottom: 1px solid #e5e5e5;
 }
-.content-formatted table th:first-child, .content-formatted table td:first-child {
+.content-formatted table th:first-child, .voog-search-modal table th:first-child, .content-formatted table td:first-child, .voog-search-modal table td:first-child {
   padding-left: 0;
 }
-.content-formatted table th {
+.content-formatted table th, .voog-search-modal table th {
   font-weight: bold;
   border-top: 1px solid #e5e5e5;
 }
-.content-formatted .edy-texteditor-view {
+.content-formatted .edy-texteditor-view, .voog-search-modal .edy-texteditor-view {
   min-height: 32px;
 }
-.content-formatted .edy-partial-view {
+.content-formatted .edy-partial-view, .voog-search-modal .edy-partial-view {
   margin-top: 25px;
 }
-.content-formatted .edy-partial-view:first-child {
+.content-formatted .edy-partial-view:first-child, .voog-search-modal .edy-partial-view:first-child {
   margin-top: 0;
 }
 
@@ -664,9 +664,7 @@ body {
 
 /* SIDEBAR */
 .sidebar {
-  width: 100%;
-  max-width: 198px;
-  min-width: 198px;
+  width: 198px;
   margin-right: 60px;
   padding-top: 20px;
   font-family: "Raleway", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
@@ -706,7 +704,7 @@ body {
   -moz-align-items: flex-end;
   align-items: flex-end;
 }
-.main-content .content-formatted {
+.main-content .content-formatted, .main-content .voog-search-modal {
   padding: 40px;
 }
 
@@ -848,37 +846,46 @@ body {
 }
 
 /* FORMS */
-.content-formatted form {
+.content-formatted form, .voog-search-modal form {
   max-width: 100%;
   margin-top: 25px;
 }
-.content-formatted .form_field {
+.content-formatted .form_field, .voog-search-modal .form_field {
   margin-top: 20px;
 }
-.content-formatted .form_field_required .form_field_label:after {
+.content-formatted .form_field_required .form_field_label:after, .voog-search-modal .form_field_required .form_field_label:after {
   content: '*';
 }
-.content-formatted .form_field_label,
-.content-formatted .edy-fe-label {
+.content-formatted .form_field_label, .voog-search-modal .form_field_label,
+.content-formatted .edy-fe-label,
+.voog-search-modal .edy-fe-label {
   display: block;
   line-height: 1.3;
   padding-bottom: 5px;
 }
-.content-formatted .form_field_textfield,
+.content-formatted .form_field_textfield, .voog-search-modal .form_field_textfield,
 .content-formatted .form_field_textarea,
+.voog-search-modal .form_field_textarea,
 .content-formatted .form_field_select,
+.voog-search-modal .form_field_select,
 .content-formatted .form_field_file,
-.content-formatted .form_submit input {
+.voog-search-modal .form_field_file,
+.content-formatted .form_submit input,
+.voog-search-modal .form_submit input {
   font: inherit;
 }
-.content-formatted .form_field_textfield,
+.content-formatted .form_field_textfield, .voog-search-modal .form_field_textfield,
 .content-formatted .form_field_textarea,
+.voog-search-modal .form_field_textarea,
 .content-formatted .form_field_select,
-.content-formatted .form_field_file {
+.voog-search-modal .form_field_select,
+.content-formatted .form_field_file,
+.voog-search-modal .form_field_file {
   max-width: 100%;
 }
-.content-formatted .form_field_textfield,
-.content-formatted .form_field_textarea {
+.content-formatted .form_field_textfield, .voog-search-modal .form_field_textfield,
+.content-formatted .form_field_textarea,
+.voog-search-modal .form_field_textarea {
   width: 280px;
   margin: 0;
   padding: 7px;
@@ -886,29 +893,30 @@ body {
   box-sizing: border-box;
 }
 @media screen and (max-width: 420px) {
-  .content-formatted .form_field_textfield,
-  .content-formatted .form_field_textarea {
+  .content-formatted .form_field_textfield, .voog-search-modal .form_field_textfield,
+  .content-formatted .form_field_textarea,
+  .voog-search-modal .form_field_textarea {
     width: 100%;
   }
 }
-.content-formatted .form_field_textarea {
+.content-formatted .form_field_textarea, .voog-search-modal .form_field_textarea {
   min-height: 98px;
 }
-.content-formatted .form_field_size_medium {
+.content-formatted .form_field_size_medium, .voog-search-modal .form_field_size_medium {
   width: 420px;
 }
 @media screen and (max-width: 420px) {
-  .content-formatted .form_field_size_medium {
+  .content-formatted .form_field_size_medium, .voog-search-modal .form_field_size_medium {
     width: 100%;
   }
 }
-.content-formatted .form_field_size_large {
+.content-formatted .form_field_size_large, .voog-search-modal .form_field_size_large {
   width: 580px;
 }
-.content-formatted .form_submit {
+.content-formatted .form_submit, .voog-search-modal .form_submit {
   margin-top: 10px;
 }
-.content-formatted .form_submit input {
+.content-formatted .form_submit input, .voog-search-modal .form_submit input {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 14px;
@@ -917,15 +925,17 @@ body {
   padding: 10px 20px;
   border: none;
 }
-.content-formatted .form_error,
-.content-formatted .form_field_error {
+.content-formatted .form_error, .voog-search-modal .form_error,
+.content-formatted .form_field_error,
+.voog-search-modal .form_field_error {
   color: #cc0000;
 }
-.content-formatted .form_field_with_errors .form_field_textfield,
-.content-formatted .form_field_with_errors .form_field_textarea {
+.content-formatted .form_field_with_errors .form_field_textfield, .voog-search-modal .form_field_with_errors .form_field_textfield,
+.content-formatted .form_field_with_errors .form_field_textarea,
+.voog-search-modal .form_field_with_errors .form_field_textarea {
   border: 1px solid #cc0000;
 }
-.content-formatted .form_notice {
+.content-formatted .form_notice, .voog-search-modal .form_notice {
   color: #60a740;
 }
 
