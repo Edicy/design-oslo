@@ -6,7 +6,7 @@
   {% include "bg-picker-styles" %}
 </head>
 
-<body class="front-page">
+<body class="front-page{% if editmode %} editmode{% endif %}">
   <div class="container">
     <div class="wrap">
       {% include "sidebar" %}
@@ -71,6 +71,10 @@
 
         {% include "footer" %}
       </main>
+
+      <div class="footer-content">
+        <div class="content-formatted">{% xcontent name="footer" %}</div>
+      </div>
     </div>
 
   </div>

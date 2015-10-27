@@ -2,6 +2,10 @@
 // Styling rules for the site's main content area. These rules affect the entire site.
 .content {
   width: 720px;
+
+  @include query($tablet-small) {
+    width: auto;
+  }
 }
 
 .main-content {
@@ -19,6 +23,10 @@
   @include flexbox;
   @include justify-content(space-between);
   @include align-items(stretch);
+
+  @include query($phone-big) {
+    display: block;
+  }
 }
 
 .half-content {
@@ -35,6 +43,12 @@
     text-align: center;
     padding: 40px;
     @include flex(0 1 100%);
+  }
+
+  @include query($phone-big) {
+    & + & {
+      margin-top: 4%;
+    }
   }
 }
 

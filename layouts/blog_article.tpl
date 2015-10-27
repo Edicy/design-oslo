@@ -5,7 +5,8 @@
   {% include 'bg-picker-variables' with 'article' %}
 </head>
 
-<body class="post-page">
+<body class="post-page{% if editmode %} editmode{% endif %}">
+  {% include "mobile-header" %}
   <div class="container">
     <div class="wrap">
       {% include "sidebar" %}

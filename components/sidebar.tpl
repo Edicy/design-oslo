@@ -1,15 +1,19 @@
 <aside class="sidebar">
-  <div class="sidebar-title content-formatted">{% unless editmode %}<a href="{{ site.root_item.url }}">{% endunless %}{% editable site.header %}{% unless editmode %}</a>{% endunless %}</div>
+  <div class="sidebar-header">
+    <div class="sidebar-title content-formatted">{% unless editmode %}<a href="{{ site.root_item.url }}">{% endunless %}{% editable site.header %}{% unless editmode %}</a>{% endunless %}</div>
 
-  <nav class="menu-main js-menu-main js-popover">
-    {% include "menu-level-1" %}
-  </nav>
+    <button class="menu-btn"></button>
+  </div>
 
-  {% if editmode or site.has_many_languages? %}
-    {% include "menu-lang" %}
-  {% endif %}
+  <div class="sidebar-inner-content">
+    <nav class="menu-main">
+      {% include "menu-level-1" %}
+    </nav>
 
-  <div class="content-formatted">{% xcontent name="footer" %}</div>
+    {% if editmode or site.has_many_languages? %}
+      {% include "menu-lang" %}
+    {% endif %}
 
-  {% if site.search.enabled %}{% include "search" %}{% endif %}
+    {% if site.search.enabled %}{% include "search" %}{% endif %}
+  </div>
 </aside>

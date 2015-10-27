@@ -48,7 +48,7 @@
     @include border(all, 1px, solid, $grey-2);
     box-sizing: border-box;
 
-    @include query($mobile-2) {
+    @include query($tablet-small) {
       width: 100%;
     }
   }
@@ -61,7 +61,7 @@
   .form_field_size_medium {
     width: 420px;
 
-    @include query($mobile-2) {
+    @include query($tablet-small) {
       width: 100%;
     }
   }

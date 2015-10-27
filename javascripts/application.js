@@ -21552,7 +21552,7 @@ return jQuery;
     if (colorExtractImageUrl) {
       if (bgPickerImageSizesContains(bgPickerImageSizes, bgPickerImagePrevious)) {
         bgPicker.bgPickerImageColor = bgPicker.bgPickerImageColor ? bgPicker.bgPickerImageColor : 'rgba(41,42,39,1)';
-        pgPicker.bgPickerCombinedLightness = getCombinedLightness(bgPicker.bgPickerImageColor, bgPickerColor);
+        bgPicker.bgPickerCombinedLightness = getCombinedLightness(bgPicker.bgPickerImageColor, bgPickerColor);
         bgPickerContentLightnessClass(bgPickerArea, bgPicker.bgPickerCombinedLightness);
       } else {
         colorExtractImage.attr('src', colorExtractImageUrl.replace(/.*\/photos/g,'/photos'));
@@ -21567,7 +21567,7 @@ return jQuery;
     } else {
       bgPicker.bgPickerImageColor = 'rgba(255,255,255,1)';
       bgPicker.bgPickerCombinedLightness = getCombinedLightness('rgba(255,255,255,1)', bgPickerColor);
-      bgPickerContentLightnessClass(bgPickerArea, pgPicker.bgPickerCombinedLightness);
+      bgPickerContentLightnessClass(bgPickerArea, bgPicker.bgPickerCombinedLightness);
     };
 
     // Updates the bgPickerContent background image and background color.
@@ -21633,9 +21633,36 @@ return jQuery;
     }
   };
 
+  var positionFooterContent = function() {
+    if (window.innerWidth <= 767) {
+      $('.sidebar').css('padding', '');
+    } else {
+      $('.sidebar').css('padding-bottom', $('.footer-content').outerHeight() + 70 + 'px');
+    }
+  };
+
+  var bindMenuButton = function() {
+    $('.menu-btn').on('click', function() {
+      $('body').toggleClass('mobile-menu-open');
+    });
+  };
+
+  var tableWrapper = function() {
+    $('body:not(.editmode) table').each(function() {
+      $(this).wrap('<div class="table-holder" />');
+    });
+  };
+
   var init = function() {
     // Add site wide functions here.
     handleElementsClick();
+    positionFooterContent();
+    bindMenuButton();
+    tableWrapper();
+
+    $(window).on('resize', function() {
+      positionFooterContent();
+    });
   };
 
   // Enables the usage of the initiations outside this file.
@@ -21646,7 +21673,7 @@ return jQuery;
     toggleFlags: toggleFlags
   });
 
-  init();
+  window.onload = init;
 })(jQuery);
 
 /*! Overthrow. An overflow:auto polyfill for responsive design. (c) 2012: Scott Jehl, Filament Group, Inc. http://filamentgroup.github.com/Overthrow/license.txt */
