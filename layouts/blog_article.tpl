@@ -35,10 +35,12 @@
 
           {% include "comment-form" %}
         </section>
-      </main>
-    </div>
 
-    {% include "footer" %}
+        {% include "voog-reference" %}
+      </main>
+
+      {% include "footer" %}
+    </div>
   </div>
 
   {% include "javascripts" %}

@@ -14,8 +14,10 @@
       <main class="content" role="main">
         <section class="content-body content-formatted">{% content %}</section>
 
-        {% include "footer" %}
+        {% include "voog-reference" %}
       </main>
+
+      {% include "footer" %}
     </div>
 
   </div>

@@ -116,20 +116,6 @@ body {
   }
 }
 
-.footer-content {
-  position: absolute;
-  bottom: 50px;
-  left: 0;
-  width: 198px;
-}
-@media screen and (max-width: 767px) {
-  .footer-content {
-    padding-top: 20px;
-    position: static;
-    width: auto;
-  }
-}
-
 .table-holder {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
@@ -1022,6 +1008,7 @@ body {
   background: #222222;
   padding: 10px 20px;
   border: none;
+  cursor: pointer;
 }
 .content-formatted .form_error, .voog-search-modal .form_error,
 .content-formatted .form_field_error,
@@ -1064,11 +1051,26 @@ body {
 
 /* FOOTER */
 .footer {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  width: 198px;
+}
+@media screen and (max-width: 767px) {
+  .footer {
+    padding-top: 20px;
+    position: static;
+    width: auto;
+  }
+}
+
+/* VOOG REFERENCE */
+.voog-reference {
   font-size: 13px;
   text-align: right;
   margin-top: 20px;
   font-family: "Raleway", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
-.footer a {
+.voog-reference a {
   color: #a4a4a4;
 }

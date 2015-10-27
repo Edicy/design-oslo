@@ -1,12 +1,14 @@
 /* FOOTER */
 // Styling rules for the site's footer. These rules affect the entire site.
 .footer {
-  font-size: 13px;
-  text-align: right;
-  margin-top: 20px;
-  font-family: $font-family-secondary;
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  width: 198px;
 
-  a {
-    @include color($grey-3);
+  @include query($tablet-small) {
+    padding-top: 20px;
+    position: static;
+    width: auto;
   }
 }

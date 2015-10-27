@@ -142,19 +142,6 @@ body {
   }
 }
 
-.footer-content {
-  position: absolute;
-  bottom: 50px;
-  left: 0;
-  width: 198px;
-
-  @include query($tablet-small) {
-    padding-top: 20px;
-    position: static;
-    width: auto;
-  }
-}
-
 .table-holder {
   overflow: auto;
   -webkit-overflow-scrolling: touch;

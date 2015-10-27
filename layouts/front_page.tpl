@@ -69,12 +69,10 @@
           </div>
         </div>
 
-        {% include "footer" %}
+        {% include "voog-reference" %}
       </main>
 
-      <div class="footer-content">
-        <div class="content-formatted">{% xcontent name="footer" %}</div>
-      </div>
+      {% include "footer" %}
     </div>
 
   </div>

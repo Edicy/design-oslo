@@ -18,10 +18,12 @@
         {% for article in articles %}
           {% include "post-box" %}
         {% endfor %}
-      </main>
-    </div>
 
-    {% include "footer" %}
+        {% include "voog-reference" %}
+      </main>
+
+      {% include "footer" %}
+    </div>
   </div>
 
   {% include "javascripts" %}

@@ -1,0 +1,12 @@
+/* VOOG REFERENCE */
+// Styling rules for the Voog reference. These rules affect the entire site.
+.voog-reference {
+  font-size: 13px;
+  text-align: right;
+  margin-top: 20px;
+  font-family: $font-family-secondary;
+
+  a {
+    @include color($grey-3);
+  }
+}
