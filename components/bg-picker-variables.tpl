@@ -13,6 +13,7 @@
   {% assign main_content_bg_color = main_content_bg.color %}
   {% assign main_content_bg_color_data = main_content_bg.colorData %}
   {% assign main_content_bg_combined_lightness = main_content_bg.combinedLightness %}
+  {% assign main_content_bg_image_color = main_content_bg.imageColor %}
 
   {% comment %}Sets the background type to choose active CMS color scheme.{% endcomment %}
   {% if main_content_bg %}
@@ -37,6 +38,10 @@
     {% assign main_content_bg_type = "dark-background" %}
   {% endif %}
 
+  {% if main_content_bg_image_color == nil %}
+    {% assign main_content_image_color = "rgb(70, 71, 76)" %}
+  {% endif %}
+
   {% if main_content_bg_image == nil %}
     {% assign main_content_bg_image = images_path | append: "/main-content-bg.jpg" %}
   {% endif %}
@@ -48,7 +53,7 @@
   {% endif %}
 
   {% if main_content_bg_color == nil %}
-    {% assign main_content_bg_color = "transparent" %}
+    {% assign main_content_bg_color = "rgba(0,0,0,0)" %}
   {% endif %}
 
   {% if main_content_bg_color_data == nil %}
@@ -66,6 +71,7 @@
   {% assign half_content_bg_1_color = half_content_bg_1.color %}
   {% assign half_content_bg_1_color_data = half_content_bg_1.colorData %}
   {% assign half_content_bg_1_combined_lightness = half_content_bg_1.combinedLightness %}
+  {% assign half_content_bg_1_image_color = half_content_bg_1.imageColor %}
 
   {% comment %}Sets the background type to choose active CMS color scheme.{% endcomment %}
   {% if half_content_bg_1 %}
@@ -90,6 +96,10 @@
     {% assign half_content_bg_1_type = "dark-background" %}
   {% endif %}
 
+  {% if half_content_bg_1_image_color == nil %}
+    {% assign half_content_bg_1_image_color = "rgb(28, 38, 57)" %}
+  {% endif %}
+
   {% if half_content_bg_1_image == nil %}
     {% assign half_content_bg_1_image = images_path | append: "/half-content-bg-1.jpg" %}
   {% endif %}
@@ -101,7 +111,7 @@
   {% endif %}
 
   {% if half_content_bg_1_color == nil %}
-    {% assign half_content_bg_1_color = "transparent" %}
+    {% assign half_content_bg_1_color = "rgba(0,0,0,0)" %}
   {% endif %}
 
   {% if half_content_bg_1_color_data == nil %}
@@ -119,6 +129,7 @@
   {% assign half_content_bg_2_color = half_content_bg_2.color %}
   {% assign half_content_bg_2_color_data = half_content_bg_2.colorData %}
   {% assign half_content_bg_2_combined_lightness = half_content_bg_2.combinedLightness %}
+  {% assign half_content_bg_2_image_color = half_content_bg_2.imageColor %}
 
   {% comment %}Sets the background type to choose active CMS color scheme.{% endcomment %}
   {% if half_content_bg_2 %}
@@ -143,6 +154,10 @@
     {% assign half_content_bg_2_type = "dark-background" %}
   {% endif %}
 
+  {% if half_content_bg_2_image_color == nil %}
+    {% assign half_content_bg_2_image_color = 'rgb(90, 77, 82)' %}
+  {% endif %}
+
   {% if half_content_bg_2_image == nil %}
     {% assign half_content_bg_2_image = images_path | append: "/half-content-bg-2.jpg" %}
   {% endif %}
@@ -154,7 +169,7 @@
   {% endif %}
 
   {% if half_content_bg_2_color == nil %}
-    {% assign half_content_bg_2_color = "transparent" %}
+    {% assign half_content_bg_2_color = "rgba(0,0,0,0)" %}
   {% endif %}
 
   {% if half_content_bg_2_color_data == nil %}
@@ -172,6 +187,7 @@
   {% assign half_content_bg_3_color = half_content_bg_3.color %}
   {% assign half_content_bg_3_color_data = half_content_bg_3.colorData %}
   {% assign half_content_bg_3_combined_lightness = half_content_bg_3.combinedLightness %}
+  {% assign half_content_bg_3_image_color = half_content_bg_3.imageColor %}
 
   {% comment %}Sets the background type to choose active CMS color scheme.{% endcomment %}
   {% if half_content_bg_3 %}
@@ -196,6 +212,10 @@
     {% assign half_content_bg_3_type = "dark-background" %}
   {% endif %}
 
+  {% if half_content_bg_3_image_color == nil %}
+    {% assign half_content_bg_2_image_color = 'rgb(84, 74, 70)' %}
+  {% endif %}
+
   {% if half_content_bg_3_image == nil %}
     {% assign half_content_bg_3_image = images_path | append: "/half-content-bg-3.jpg" %}
   {% endif %}
@@ -207,7 +227,7 @@
   {% endif %}
 
   {% if half_content_bg_3_color == nil %}
-    {% assign half_content_bg_3_color = "transparent" %}
+    {% assign half_content_bg_3_color = "rgba(0,0,0,0)" %}
   {% endif %}
 
   {% if half_content_bg_3_color_data == nil %}
@@ -225,6 +245,7 @@
   {% assign half_content_bg_4_color = half_content_bg_4.color %}
   {% assign half_content_bg_4_color_data = half_content_bg_4.colorData %}
   {% assign half_content_bg_4_combined_lightness = half_content_bg_4.combinedLightness %}
+  {% assign half_content_bg_4_image_color = half_content_bg_4.imageColor %}
 
   {% comment %}Sets the background type to choose active CMS color scheme.{% endcomment %}
   {% if half_content_bg_4 %}
@@ -249,6 +270,10 @@
     {% assign half_content_bg_4_type = "dark-background" %}
   {% endif %}
 
+  {% if half_content_bg_4_image_color == nil %}
+    {% assign half_content_bg_4_image_color = 'rgb(179, 191, 189)' %}
+  {% endif %}
+
   {% if half_content_bg_4_image == nil %}
     {% assign half_content_bg_4_image = images_path | append: "/half-content-bg-4.jpg" %}
   {% endif %}
@@ -260,7 +285,7 @@
   {% endif %}
 
   {% if half_content_bg_4_color == nil %}
-    {% assign half_content_bg_4_color = "transparent" %}
+    {% assign half_content_bg_4_color = "rgba(0,0,0,0)" %}
   {% endif %}
 
   {% if half_content_bg_4_color_data == nil %}

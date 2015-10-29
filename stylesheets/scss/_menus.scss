@@ -43,6 +43,10 @@
   .menu {
     .menu-item {
       margin-top: 9px;
+
+      &:first-child {
+        margin-top: 0;
+      }
     }
 
     .menu-link {
@@ -54,8 +58,12 @@
         @include border(bottom, 2px, solid, $secondary-color);
 
         &:hover {
-          border: none;
+          @include color($secondary-color);
         }
+      }
+
+      &:hover {
+        @include color($secondary-color, 0.7);
       }
     }
 
@@ -85,12 +93,6 @@
         opacity: .5;
       }
 
-      &:hover {
-        &:before {
-          opacity: 1;
-        }
-      }
-
       &.active {
         font-weight: bold;
         border: none;
@@ -118,16 +120,10 @@
       font-size: 14px;
       font-weight: normal;
       padding-left: 28px;
-      @include color($grey-1);
 
       &.active {
         font-weight: bold;
         border: none;
-        @include color($secondary-color);
-      }
-
-      &:hover {
-        @include color($secondary-color);
       }
 
       &:before {
@@ -138,6 +134,12 @@
     .edit-btn {
       margin-left: 28px;
     }
+  }
+
+  @include query($tablet-small) {
+    margin-top: 0;
+    border-top: 0;
+    padding-top: 0;
   }
 }
 

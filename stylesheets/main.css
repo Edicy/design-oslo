@@ -1,15 +1,19 @@
 @charset "UTF-8";
 /* GENERAL */
+* {
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.3;
+  line-height: 1.6;
   color: #404040;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 860px) {
   body.mobile-menu-open {
     overflow: hidden;
     height: 100vh;
@@ -20,7 +24,7 @@ body {
   }
 }
 
-.content-formatted:after, .voog-search-modal:after {
+.content-formatted:after, body .voog-search-modal:after {
   content: "";
   display: table;
   clear: both;
@@ -54,9 +58,9 @@ body {
 }
 
 .container {
-  max-width: 978px;
+  max-width: 970px;
   margin: 70px auto 70px;
-  padding: 0 25px;
+  padding: 0 40px;
   overflow: hidden;
 }
 .container a {
@@ -65,18 +69,25 @@ body {
 .container a img {
   border: none;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 860px) {
   .container {
     margin-top: 0;
-    padding-top: 63px;
-    margin-bottom: 16px;
+    padding-top: 83px;
+    margin-bottom: 0;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+    min-height: 100vh;
     position: relative;
   }
+  .front-page .container {
+    padding-top: 63px;
+  }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .container {
-    padding-left: 8px;
-    padding-right: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
   }
 }
 
@@ -94,7 +105,7 @@ body {
 .front-page .container .wrap:first-child {
   margin-top: 0;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 860px) {
   .container .wrap {
     display: block;
     position: static;
@@ -122,43 +133,90 @@ body {
   width: 100%;
 }
 
-.content-formatted, .voog-search-modal {
+.content-formatted .custom-btn, body .voog-search-modal .custom-btn, .content-formatted .form_submit input, body .voog-search-modal .form_submit input {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+  background: #222222;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+.content-formatted .custom-btn:hover, body .voog-search-modal .custom-btn:hover, .content-formatted .form_submit input:hover, body .voog-search-modal .form_submit input:hover {
+  background: rgba(34, 34, 34, 0.9);
+}
+.dark-background .content-formatted .custom-btn, .dark-background body .voog-search-modal .custom-btn, body .dark-background .voog-search-modal .custom-btn, .dark-background .content-formatted .form_submit input, .content-formatted .form_submit .dark-background body .voog-search-modal input, .content-formatted .form_submit body .dark-background .voog-search-modal input, body .voog-search-modal .form_submit .dark-background .content-formatted input, .dark-background body .voog-search-modal .form_submit input, body .dark-background .voog-search-modal .form_submit input {
+  color: #222222;
+  background: white;
+}
+.dark-background .content-formatted .custom-btn:hover, .dark-background body .voog-search-modal .custom-btn:hover, body .dark-background .voog-search-modal .custom-btn:hover, .dark-background .content-formatted .form_submit input:hover, .content-formatted .form_submit .dark-background body .voog-search-modal input:hover, .content-formatted .form_submit body .dark-background .voog-search-modal input:hover, body .voog-search-modal .form_submit .dark-background .content-formatted input:hover, .dark-background body .voog-search-modal .form_submit input:hover, body .dark-background .voog-search-modal .form_submit input:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.content-formatted, body .voog-search-modal {
   word-wrap: break-word;
 }
-.content-formatted h1, .voog-search-modal h1, .content-formatted h2, .voog-search-modal h2, .content-formatted h3, .voog-search-modal h3, .content-formatted h4, .voog-search-modal h4, .content-formatted h5, .voog-search-modal h5, .content-formatted h6, .voog-search-modal h6, .content-formatted p, .voog-search-modal p, .content-formatted ul, .voog-search-modal ul, .content-formatted ol, .voog-search-modal ol, .content-formatted pre, .voog-search-modal pre, .content-formatted code, .voog-search-modal code, .content-formatted img, .voog-search-modal img, .content-formatted iframe, .voog-search-modal iframe, .content-formatted table form, .voog-search-modal table form {
+.content-formatted h1, body .voog-search-modal h1, .content-formatted h2, body .voog-search-modal h2, .content-formatted h3, body .voog-search-modal h3, .content-formatted h4, body .voog-search-modal h4, .content-formatted h5, body .voog-search-modal h5, .content-formatted h6, body .voog-search-modal h6 {
+  line-height: 1.3;
+}
+.content-formatted h4, body .voog-search-modal h4, .content-formatted h5, body .voog-search-modal h5, .content-formatted h6, body .voog-search-modal h6, .content-formatted p, body .voog-search-modal p, .content-formatted ul, body .voog-search-modal ul, .content-formatted ol, body .voog-search-modal ol, .content-formatted pre, body .voog-search-modal pre, .content-formatted code, body .voog-search-modal code, .content-formatted img, body .voog-search-modal img, .content-formatted iframe, body .voog-search-modal iframe, .content-formatted table form, body .voog-search-modal table form {
   margin-bottom: 0;
 }
-.content-formatted h1:first-child, .voog-search-modal h1:first-child, .content-formatted h2:first-child, .voog-search-modal h2:first-child, .content-formatted h3:first-child, .voog-search-modal h3:first-child, .content-formatted h4:first-child, .voog-search-modal h4:first-child, .content-formatted h5:first-child, .voog-search-modal h5:first-child, .content-formatted h6:first-child, .voog-search-modal h6:first-child, .content-formatted p:first-child, .voog-search-modal p:first-child, .content-formatted ul:first-child, .voog-search-modal ul:first-child, .content-formatted ol:first-child, .voog-search-modal ol:first-child, .content-formatted pre:first-child, .voog-search-modal pre:first-child, .content-formatted code:first-child, .voog-search-modal code:first-child, .content-formatted img:first-child, .voog-search-modal img:first-child, .content-formatted iframe:first-child, .voog-search-modal iframe:first-child, .content-formatted table form:first-child, .voog-search-modal table form:first-child {
+.content-formatted h4:first-child, body .voog-search-modal h4:first-child, .content-formatted h5:first-child, body .voog-search-modal h5:first-child, .content-formatted h6:first-child, body .voog-search-modal h6:first-child, .content-formatted p:first-child, body .voog-search-modal p:first-child, .content-formatted ul:first-child, body .voog-search-modal ul:first-child, .content-formatted ol:first-child, body .voog-search-modal ol:first-child, .content-formatted pre:first-child, body .voog-search-modal pre:first-child, .content-formatted code:first-child, body .voog-search-modal code:first-child, .content-formatted img:first-child, body .voog-search-modal img:first-child, .content-formatted iframe:first-child, body .voog-search-modal iframe:first-child, .content-formatted table form:first-child, body .voog-search-modal table form:first-child {
   margin-top: 0;
 }
-.content-formatted h1, .voog-search-modal h1, .content-formatted h2, .voog-search-modal h2, .content-formatted h3, .voog-search-modal h3, .content-formatted h4, .voog-search-modal h4, .content-formatted h5, .voog-search-modal h5, .content-formatted h6, .voog-search-modal h6 {
+.content-formatted h4:last-child, body .voog-search-modal h4:last-child, .content-formatted h5:last-child, body .voog-search-modal h5:last-child, .content-formatted h6:last-child, body .voog-search-modal h6:last-child, .content-formatted p:last-child, body .voog-search-modal p:last-child, .content-formatted ul:last-child, body .voog-search-modal ul:last-child, .content-formatted ol:last-child, body .voog-search-modal ol:last-child, .content-formatted pre:last-child, body .voog-search-modal pre:last-child, .content-formatted code:last-child, body .voog-search-modal code:last-child, .content-formatted img:last-child, body .voog-search-modal img:last-child, .content-formatted iframe:last-child, body .voog-search-modal iframe:last-child, .content-formatted table form:last-child, body .voog-search-modal table form:last-child {
+  margin-bottom: 0;
+}
+.content-formatted h1, body .voog-search-modal h1, .content-formatted h2, body .voog-search-modal h2, .content-formatted h3, body .voog-search-modal h3 {
+  margin-bottom: 26px;
+}
+.content-formatted h1:first-child, body .voog-search-modal h1:first-child, .content-formatted h2:first-child, body .voog-search-modal h2:first-child, .content-formatted h3:first-child, body .voog-search-modal h3:first-child {
+  margin-top: 0;
+}
+.content-formatted h1:last-child, body .voog-search-modal h1:last-child, .content-formatted h2:last-child, body .voog-search-modal h2:last-child, .content-formatted h3:last-child, body .voog-search-modal h3:last-child {
+  margin-bottom: 0;
+}
+.content-formatted h2, body .voog-search-modal h2, .content-formatted h3, body .voog-search-modal h3 {
+  margin-bottom: 16px;
+}
+.content-formatted h1, body .voog-search-modal h1, .content-formatted h2, body .voog-search-modal h2, .content-formatted h3, body .voog-search-modal h3, .content-formatted h4, body .voog-search-modal h4, .content-formatted h5, body .voog-search-modal h5, .content-formatted h6, body .voog-search-modal h6 {
   font-family: "Raleway", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-weight: 400;
 }
-.content-formatted h1, .voog-search-modal h1 {
+.content-formatted h1, body .voog-search-modal h1 {
   font-size: 38px;
   color: #222222;
 }
-.content-formatted h2, .voog-search-modal h2, .content-formatted h3, .voog-search-modal h3, .content-formatted h4, .voog-search-modal h4, .content-formatted h5, .voog-search-modal h5, .content-formatted h6, .voog-search-modal h6 {
+.dark-background .content-formatted h1, .dark-background body .voog-search-modal h1, body .dark-background .voog-search-modal h1 {
+  color: white;
+}
+.content-formatted h2, body .voog-search-modal h2, .content-formatted h3, body .voog-search-modal h3, .content-formatted h4, body .voog-search-modal h4, .content-formatted h5, body .voog-search-modal h5, .content-formatted h6, body .voog-search-modal h6 {
   color: #1d1d1d;
 }
-.content-formatted h2, .voog-search-modal h2 {
-  margin-top: 65px;
+.dark-background .content-formatted h2, .dark-background body .voog-search-modal h2, body .dark-background .voog-search-modal h2, .dark-background .content-formatted h3, .dark-background body .voog-search-modal h3, body .dark-background .voog-search-modal h3, .dark-background .content-formatted h4, .dark-background body .voog-search-modal h4, body .dark-background .voog-search-modal h4, .dark-background .content-formatted h5, .dark-background body .voog-search-modal h5, body .dark-background .voog-search-modal h5, .dark-background .content-formatted h6, .dark-background body .voog-search-modal h6, body .dark-background .voog-search-modal h6 {
+  color: white;
+}
+.content-formatted h2, body .voog-search-modal h2 {
+  margin-top: 26px;
   font-size: 24px;
 }
-.content-formatted h3, .voog-search-modal h3, .content-formatted h4, .voog-search-modal h4, .content-formatted h5, .voog-search-modal h5, .content-formatted h6, .voog-search-modal h6 {
+.content-formatted h3, body .voog-search-modal h3, .content-formatted h4, body .voog-search-modal h4, .content-formatted h5, body .voog-search-modal h5, .content-formatted h6, body .voog-search-modal h6 {
   font-size: 20px;
 }
-.content-formatted ul, .voog-search-modal ul {
+.content-formatted ul, body .voog-search-modal ul {
   list-style-type: none;
   padding: 0;
 }
-.content-formatted ul li, .voog-search-modal ul li {
+.content-formatted ul li, body .voog-search-modal ul li {
   position: relative;
   padding-left: 25px;
   margin: 15px 0;
 }
-.content-formatted ul li:before, .voog-search-modal ul li:before {
+.content-formatted ul li:before, body .voog-search-modal ul li:before {
   content: '°';
   position: absolute;
   left: 7px;
@@ -166,48 +224,56 @@ body {
   font-size: 20px;
   color: #B4B4B4;
 }
-.content-formatted a, .voog-search-modal a {
+.content-formatted ol, body .voog-search-modal ol {
+  padding-left: 25px;
+}
+.content-formatted ol li, body .voog-search-modal ol li {
+  margin: 15px 0;
+}
+.content-formatted a, body .voog-search-modal a {
   color: #222222;
   text-decoration: underline;
 }
-.content-formatted a:hover, .voog-search-modal a:hover {
+.content-formatted a:hover, body .voog-search-modal a:hover {
   text-decoration: none;
 }
-.content-formatted img, .voog-search-modal img {
+.dark-background .content-formatted a, .dark-background body .voog-search-modal a, body .dark-background .voog-search-modal a {
+  color: white;
+}
+.content-formatted img, body .voog-search-modal img {
   height: auto;
 }
-.content-formatted .table-container, .voog-search-modal .table-container {
+.content-formatted .table-container, body .voog-search-modal .table-container {
   margin-top: 20px;
 }
-.content-formatted .overthrow, .voog-search-modal .overthrow {
+.content-formatted .overthrow, body .voog-search-modal .overthrow {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
-.content-formatted table, .voog-search-modal table {
+.content-formatted table, body .voog-search-modal table {
   width: 100%;
   margin: 20px 0;
-  font-size: 16px;
   border-collapse: collapse;
 }
-.content-formatted table th, .voog-search-modal table th, .content-formatted table td, .voog-search-modal table td {
+.content-formatted table th, body .voog-search-modal table th, .content-formatted table td, body .voog-search-modal table td {
   padding: 10px;
   text-align: left;
   border-bottom: 1px solid #e5e5e5;
 }
-.content-formatted table th:first-child, .voog-search-modal table th:first-child, .content-formatted table td:first-child, .voog-search-modal table td:first-child {
+.content-formatted table th:first-child, body .voog-search-modal table th:first-child, .content-formatted table td:first-child, body .voog-search-modal table td:first-child {
   padding-left: 0;
 }
-.content-formatted table th, .voog-search-modal table th {
+.content-formatted table th, body .voog-search-modal table th {
   font-weight: bold;
   border-top: 1px solid #e5e5e5;
 }
-.content-formatted .edy-texteditor-view, .voog-search-modal .edy-texteditor-view {
+.content-formatted .edy-texteditor-view, body .voog-search-modal .edy-texteditor-view {
   min-height: 32px;
 }
-.content-formatted .edy-partial-view, .voog-search-modal .edy-partial-view {
+.content-formatted .edy-partial-view, body .voog-search-modal .edy-partial-view {
   margin-top: 25px;
 }
-.content-formatted .edy-partial-view:first-child, .voog-search-modal .edy-partial-view:first-child {
+.content-formatted .edy-partial-view:first-child, body .voog-search-modal .edy-partial-view:first-child {
   margin-top: 0;
 }
 
@@ -236,6 +302,9 @@ body {
 .menu-main .menu .menu-item {
   margin-top: 9px;
 }
+.menu-main .menu .menu-item:first-child {
+  margin-top: 0;
+}
 .menu-main .menu .menu-link {
   text-transform: uppercase;
   font-weight: 600;
@@ -245,7 +314,11 @@ body {
   border-bottom: 2px solid #222222;
 }
 .menu-main .menu .menu-link.active:hover {
-  border: none;
+  color: #222222;
+}
+.menu-main .menu .menu-link:hover {
+  color: #222222;
+  color: rgba(34, 34, 34, 0.7);
 }
 .menu-main .menu-sub {
   padding-top: 7px;
@@ -268,9 +341,6 @@ body {
   top: 5px;
   opacity: .5;
 }
-.menu-main .menu-sub .menu-link:hover:before {
-  opacity: 1;
-}
 .menu-main .menu-sub .menu-link.active {
   font-weight: bold;
   border: none;
@@ -292,21 +362,23 @@ body {
   font-size: 14px;
   font-weight: normal;
   padding-left: 28px;
-  color: #9b9b9b;
 }
 .menu-main .menu-third .menu-link.active {
   font-weight: bold;
   border: none;
-  color: #222222;
-}
-.menu-main .menu-third .menu-link:hover {
-  color: #222222;
 }
 .menu-main .menu-third .menu-link:before {
   content: none;
 }
 .menu-main .menu-third .edit-btn {
   margin-left: 28px;
+}
+@media screen and (max-width: 860px) {
+  .menu-main {
+    margin-top: 0;
+    border-top: 0;
+    padding-top: 0;
+  }
 }
 
 .menu-lang {
@@ -658,16 +730,16 @@ body {
 
 /* SIDEBAR */
 .sidebar {
-  width: 198px;
-  margin-right: 60px;
-  padding-top: 20px;
+  width: 200px;
+  margin-right: 50px;
+  padding-top: 10px;
   font-family: "Raleway", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   -webkit-flex-shrink: 0;
   -moz-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 860px) {
   .sidebar {
     width: auto;
     margin-right: 0;
@@ -675,10 +747,14 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 0 20px;
+    padding: 0 40px;
     box-sizing: border-box;
     background: #FFFFFF;
-    z-index: 1;
+  }
+}
+@media screen and (max-width: 600px) {
+  .sidebar {
+    padding: 0 20px;
   }
 }
 
@@ -693,11 +769,7 @@ body {
 .sidebar-title a {
   text-decoration: none;
 }
-.sidebar-title a:hover {
-  color: #222222;
-  color: rgba(34, 34, 34, 0.8);
-}
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 860px) {
   .sidebar-title {
     padding: 15px 43px 15px 0;
   }
@@ -711,53 +783,60 @@ body {
   cursor: pointer;
   position: absolute;
   top: 0;
-  right: -20px;
+  right: 20px;
   display: none;
   padding: 0;
+  z-index: 2;
+  outline: none;
 }
 .mobile-menu-open .menu-btn {
   background-image: url("../assets/ico-menu-open.svg");
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 860px) {
   .menu-btn {
     display: block;
   }
 }
-
-.sidebar-header {
-  position: relative;
-  z-index: 1;
-  background: #FFFFFF;
+@media screen and (max-width: 600px) {
+  .menu-btn {
+    right: 0;
+  }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 860px) {
   .sidebar-inner-content {
     position: absolute;
     right: 0;
     top: 0;
     background: #FFFFFF;
-    padding: 63px 20px 70px;
+    padding: 63px 20px 100px;
     box-sizing: border-box;
     height: 100vh;
     width: 240px;
-    transform: translate3d(100%, 0, 0);
-    transition: 200ms transform;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
+    z-index: 1;
+    -webkit-transform: translate3d(100%, 0, 0);
+    -moz-transform: translate3d(100%, 0, 0);
+    -ms-transform: translate3d(100%, 0, 0);
+    -o-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    -webkit-transition: 200ms all;
+    -moz-transition: 200ms all;
+    transition: 200ms all;
   }
 }
 .mobile-menu-open .sidebar-inner-content {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
 /* CONTENT */
 .content {
-  width: 720px;
-}
-@media screen and (max-width: 767px) {
-  .content {
-    width: auto;
-  }
+  flex: 1 1 auto;
 }
 
 .main-content {
@@ -773,12 +852,23 @@ body {
   -moz-align-items: flex-end;
   align-items: flex-end;
 }
-.main-content .content-formatted, .main-content .voog-search-modal {
+.main-content .content-formatted, .main-content body .voog-search-modal, body .main-content .voog-search-modal {
   padding: 40px;
+}
+@media screen and (max-width: 600px) {
+  .main-content .content-formatted, .main-content body .voog-search-modal, body .main-content .voog-search-modal {
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 860px) {
+  .main-content {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
 }
 
 .half-content-holder {
-  margin: 4% 0;
+  margin: 2% 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
@@ -795,20 +885,28 @@ body {
   -moz-align-items: stretch;
   align-items: stretch;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 860px) {
+  .half-content-holder {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+}
+@media screen and (max-width: 600px) {
   .half-content-holder {
     display: block;
+    margin-top: 8px;
+    margin-bottom: 8px;
   }
 }
 
 .half-content {
-  min-height: 351px;
+  min-height: 350px;
   -webkit-box-flex: 0;
-  -webkit-flex: 0 1 48%;
+  -webkit-flex: 0 1 49%;
   -moz-box-flex: 0;
-  -moz-flex: 0 1 48%;
-  -ms-flex: 0 1 48%;
-  flex: 0 1 48%;
+  -moz-flex: 0 1 49%;
+  -ms-flex: 0 1 49%;
+  flex: 0 1 49%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
@@ -833,9 +931,14 @@ body {
   -ms-flex: 0 1 100%;
   flex: 0 1 100%;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
+  .half-content .background-type {
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
   .half-content + .half-content {
-    margin-top: 4%;
+    margin-top: 8px;
   }
 }
 
@@ -846,6 +949,12 @@ body {
 /* BLOG & BLOG ARTICLE */
 .post {
   margin: 45px 0;
+}
+.post .post-header {
+  margin-bottom: 16px;
+}
+.post .post-header h1 {
+  font-size: 30px;
 }
 .post .post-title {
   margin: 10px 0 15px;
@@ -905,122 +1014,135 @@ body {
   box-sizing: border-box;
   padding: 9px 10px 9px 38px;
   background: url("../assets/search-icon.svg") no-repeat 12px 12px;
+  background-size: 14px 13px;
   border-radius: 0;
-  color: #9b9b9b;
+  color: #404040;
 }
 .search-input::-webkit-input-placeholder {
   opacity: 1;
   color: inherit;
+  color: #9b9b9b;
 }
 .search-input:-moz-placeholder {
   opacity: 1;
   color: inherit;
+  color: #9b9b9b;
 }
 .search-input::-moz-placeholder {
   opacity: 1;
   color: inherit;
+  color: #9b9b9b;
 }
 .search-input:-ms-input-placeholder {
   opacity: 1;
   color: inherit;
+  color: #9b9b9b;
 }
 
-.voog-search-modal {
+body .voog-search-modal {
   z-index: 1;
+  font-size: 14px;
+  width: 260px;
+}
+body .voog-search-modal h3 {
+  font-size: 16px;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 /* FORMS */
-.content-formatted form, .voog-search-modal form {
+.content-formatted form, body .voog-search-modal form {
   max-width: 100%;
   margin-top: 25px;
 }
-.content-formatted .form_field, .voog-search-modal .form_field {
+.content-formatted .form_field, body .voog-search-modal .form_field {
   margin-top: 20px;
 }
-.content-formatted .form_field_required .form_field_label:after, .voog-search-modal .form_field_required .form_field_label:after {
+.content-formatted .form_field_required .form_field_label:after, body .voog-search-modal .form_field_required .form_field_label:after {
   content: '*';
 }
-.content-formatted .form_field_label, .voog-search-modal .form_field_label,
+.content-formatted .form_field_label, body .voog-search-modal .form_field_label,
 .content-formatted .edy-fe-label,
-.voog-search-modal .edy-fe-label {
+body .voog-search-modal .edy-fe-label {
   display: block;
   line-height: 1.3;
   padding-bottom: 5px;
 }
-.content-formatted .form_field_textfield, .voog-search-modal .form_field_textfield,
+.content-formatted .form_field_textfield, body .voog-search-modal .form_field_textfield,
 .content-formatted .form_field_textarea,
-.voog-search-modal .form_field_textarea,
+body .voog-search-modal .form_field_textarea,
 .content-formatted .form_field_select,
-.voog-search-modal .form_field_select,
+body .voog-search-modal .form_field_select,
 .content-formatted .form_field_file,
-.voog-search-modal .form_field_file,
-.content-formatted .form_submit input,
-.voog-search-modal .form_submit input {
+body .voog-search-modal .form_field_file {
   font: inherit;
+  -webkit-appearance: none;
+  border-radius: 0;
 }
-.content-formatted .form_field_textfield, .voog-search-modal .form_field_textfield,
+.content-formatted .form_field_textfield, body .voog-search-modal .form_field_textfield,
 .content-formatted .form_field_textarea,
-.voog-search-modal .form_field_textarea,
+body .voog-search-modal .form_field_textarea,
 .content-formatted .form_field_select,
-.voog-search-modal .form_field_select,
+body .voog-search-modal .form_field_select,
 .content-formatted .form_field_file,
-.voog-search-modal .form_field_file {
+body .voog-search-modal .form_field_file {
   max-width: 100%;
 }
-.content-formatted .form_field_textfield, .voog-search-modal .form_field_textfield,
+.content-formatted .form_field_textfield, body .voog-search-modal .form_field_textfield,
 .content-formatted .form_field_textarea,
-.voog-search-modal .form_field_textarea {
-  width: 280px;
+body .voog-search-modal .form_field_textarea {
+  width: 50%;
   margin: 0;
   padding: 7px;
   border: 1px solid #e4e4e4;
   box-sizing: border-box;
 }
-@media screen and (max-width: 767px) {
-  .content-formatted .form_field_textfield, .voog-search-modal .form_field_textfield,
+@media screen and (max-width: 860px) {
+  .content-formatted .form_field_textfield, body .voog-search-modal .form_field_textfield,
   .content-formatted .form_field_textarea,
-  .voog-search-modal .form_field_textarea {
+  body .voog-search-modal .form_field_textarea {
     width: 100%;
   }
 }
-.content-formatted .form_field_textarea, .voog-search-modal .form_field_textarea {
+.content-formatted .form_field_textarea, body .voog-search-modal .form_field_textarea {
   min-height: 98px;
 }
-.content-formatted .form_field_size_medium, .voog-search-modal .form_field_size_medium {
-  width: 420px;
+.content-formatted .form_field_size_small, body .voog-search-modal .form_field_size_small {
+  width: 25%;
 }
-@media screen and (max-width: 767px) {
-  .content-formatted .form_field_size_medium, .voog-search-modal .form_field_size_medium {
+@media screen and (max-width: 860px) {
+  .content-formatted .form_field_size_small, body .voog-search-modal .form_field_size_small {
     width: 100%;
   }
 }
-.content-formatted .form_field_size_large, .voog-search-modal .form_field_size_large {
-  width: 580px;
+.content-formatted .form_field_size_medium, body .voog-search-modal .form_field_size_medium {
+  width: 50%;
 }
-.content-formatted .form_submit, .voog-search-modal .form_submit {
+@media screen and (max-width: 860px) {
+  .content-formatted .form_field_size_medium, body .voog-search-modal .form_field_size_medium {
+    width: 100%;
+  }
+}
+.content-formatted .form_field_size_large, body .voog-search-modal .form_field_size_large {
+  width: 100%;
+}
+.content-formatted .form_submit, body .voog-search-modal .form_submit {
   margin-top: 10px;
 }
-.content-formatted .form_submit input, .voog-search-modal .form_submit input {
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 14px;
-  color: white;
-  background: #222222;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
+.content-formatted .form_submit input, body .voog-search-modal .form_submit input {
+  -webkit-appearance: none;
+  border-radius: 0;
 }
-.content-formatted .form_error, .voog-search-modal .form_error,
+.content-formatted .form_error, body .voog-search-modal .form_error,
 .content-formatted .form_field_error,
-.voog-search-modal .form_field_error {
+body .voog-search-modal .form_field_error {
   color: #cc0000;
 }
-.content-formatted .form_field_with_errors .form_field_textfield, .voog-search-modal .form_field_with_errors .form_field_textfield,
+.content-formatted .form_field_with_errors .form_field_textfield, body .voog-search-modal .form_field_with_errors .form_field_textfield,
 .content-formatted .form_field_with_errors .form_field_textarea,
-.voog-search-modal .form_field_with_errors .form_field_textarea {
+body .voog-search-modal .form_field_with_errors .form_field_textarea {
   border: 1px solid #cc0000;
 }
-.content-formatted .form_notice, .voog-search-modal .form_notice {
+.content-formatted .form_notice, body .voog-search-modal .form_notice {
   color: #60a740;
 }
 
@@ -1054,9 +1176,10 @@ body {
   position: absolute;
   bottom: 50px;
   left: 0;
-  width: 198px;
+  width: 200px;
+  font-size: 14px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 860px) {
   .footer {
     padding-top: 20px;
     position: static;

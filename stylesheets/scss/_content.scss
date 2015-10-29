@@ -1,11 +1,7 @@
 /* CONTENT */
 // Styling rules for the site's main content area. These rules affect the entire site.
 .content {
-  width: 720px;
-
-  @include query($tablet-small) {
-    width: auto;
-  }
+  flex: 1 1 auto;
 }
 
 .main-content {
@@ -15,23 +11,39 @@
 
   .content-formatted {
     padding: 40px;
+
+    @include query($phone-big) {
+      padding: 20px;
+    }
+  }
+
+  @include query($tablet-small) {
+    margin-left: -12px;
+    margin-right: -12px;
   }
 }
 
 .half-content-holder {
-  margin: 4% 0;
+  margin: 2% 0;
   @include flexbox;
   @include justify-content(space-between);
   @include align-items(stretch);
 
+  @include query($tablet-small) {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+
   @include query($phone-big) {
     display: block;
+    margin-top: 8px;
+    margin-bottom: 8px;
   }
 }
 
 .half-content {
-  min-height: 351px;
-  @include flex(0 1 48%);
+  min-height: 350px;
+  @include flex(0 1 49%);
   @include flexbox;
   @include align-items(center);
 
@@ -43,11 +55,15 @@
     text-align: center;
     padding: 40px;
     @include flex(0 1 100%);
+
+    @include query($phone-big) {
+      padding: 20px;
+    }
   }
 
   @include query($phone-big) {
     & + & {
-      margin-top: 4%;
+      margin-top: 8px;
     }
   }
 }

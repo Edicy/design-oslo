@@ -97,6 +97,7 @@
           picture: true,
           color: true,
           showAlpha: true,
+          target_width: $(this).data('target-width'),
           preview: function(data) {
             Site.bgPickerPreview($button.parent(), data, picker);
           },

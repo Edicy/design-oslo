@@ -23,8 +23,5 @@
   </div>
 
   {% include "javascripts" %}
-  <script>
-    site.initCommonPage();
-  </script>
 </body>
 </html>

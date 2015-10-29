@@ -8,6 +8,7 @@
   {% else %}
     .main-content .background-image {
       background-image: url("{{ main_content_bg_image }}");
+      background-color: {{ main_content_bg_image_color }};
     }
   {% endif %}
 
@@ -26,6 +27,7 @@
   {% else %}
     .half-content-1 .background-image {
       background-image: url("{{ half_content_bg_1_image }}");
+      background-color: {{ half_content_bg_1_image_color }};
     }
   {% endif %}
 
@@ -44,6 +46,7 @@
   {% else %}
     .half-content-2 .background-image {
       background-image: url("{{ half_content_bg_2_image }}");
+      background-color: {{ half_content_bg_2_image_color }};
     }
   {% endif %}
 
@@ -62,6 +65,7 @@
   {% else %}
     .half-content-3 .background-image {
       background-image: url("{{ half_content_bg_3_image }}");
+      background-color: {{ half_content_bg_3_image_color }};
     }
   {% endif %}
 
@@ -80,6 +84,7 @@
   {% else %}
     .half-content-4 .background-image {
       background-image: url("{{ half_content_bg_4_image }}");
+      background-color: {{ half_content_bg_4_image_color }};
     }
   {% endif %}
 

@@ -21503,20 +21503,6 @@ return jQuery;
     });
   };
 
-  // Returns the suitable version of the image depending on the viewport width.
-  var getImageByWidth = function(sizes, targetWidth) {
-    var prevImage;
-
-    for (var i = 0, max = sizes.length; i < max; i++) {
-      if (sizes[i].width < targetWidth) {
-        return prevImage || sizes[i];
-      }
-      prevImage = sizes[i];
-    }
-    // Makes sure that smallest is returned if all images bigger than targetWidth.
-    return sizes[sizes.length - 1];
-  };
-
   var bgPickerImageSizesContains = function(sizes, url) {
     for (var i = sizes.length; i--;) {
       if (url.indexOf(sizes[i].url.trim()) > -1) {
@@ -21540,8 +21526,7 @@ return jQuery;
     // Defines the variables used in preview logic.
 
     var bgPickerImagePrevious = $(bgPickerArea).find('.js-background-image').css('background-image'),
-        bgPickerImageSuitable = data.imageSizes ? getImageByWidth(data.imageSizes, $(window).width()) : null,
-        bgPickerImage = (data.image && data.image !== '') ? 'url(' + bgPickerImageSuitable.url + ')' : 'none',
+        bgPickerImage = (data.image && data.image !== '') ? 'url(' + data.image + ')' : 'none',
         bgPickerImageSizes = (data.imageSizes && data.imageSizes !== '') ? data.imageSizes : null,
         bgPickerColor = (data.color && data.color !== '') ? data.color : 'rgba(0,0,0,0)',
         bgPickerColorDataLightness = (data.colorData && data.colorData !== '') ? data.colorData.lightness : 1,
@@ -21554,6 +21539,7 @@ return jQuery;
         bgPicker.bgPickerImageColor = bgPicker.bgPickerImageColor ? bgPicker.bgPickerImageColor : 'rgba(41,42,39,1)';
         bgPicker.bgPickerCombinedLightness = getCombinedLightness(bgPicker.bgPickerImageColor, bgPickerColor);
         bgPickerContentLightnessClass(bgPickerArea, bgPicker.bgPickerCombinedLightness);
+        $(bgPickerArea).find('.js-background-image').css({'background-color' : bgPicker.bgPickerImageColor});
       } else {
         colorExtractImage.attr('src', colorExtractImageUrl.replace(/.*\/photos/g,'/photos'));
         colorExtractImage.load(function() {
@@ -21561,6 +21547,7 @@ return jQuery;
             bgPicker.bgPickerImageColor = data.bgColor ? data.bgColor : 'rgba(255,255,255,1)';
             bgPicker.bgPickerCombinedLightness = getCombinedLightness(bgPicker.bgPickerImageColor, bgPickerColor);
             bgPickerContentLightnessClass(bgPickerArea, bgPicker.bgPickerCombinedLightness);
+            $(bgPickerArea).find('.js-background-image').css({'background-color' : bgPicker.bgPickerImageColor});
           });
         });
       };
@@ -21568,6 +21555,7 @@ return jQuery;
       bgPicker.bgPickerImageColor = 'rgba(255,255,255,1)';
       bgPicker.bgPickerCombinedLightness = getCombinedLightness('rgba(255,255,255,1)', bgPickerColor);
       bgPickerContentLightnessClass(bgPickerArea, bgPicker.bgPickerCombinedLightness);
+      $(bgPickerArea).find('.js-background-image').css({'background-color' : bgPicker.bgPickerImageColor});
     };
 
     // Updates the bgPickerContent background image and background color.
@@ -21582,11 +21570,20 @@ return jQuery;
     commitData.imageSizes = data.imageSizes || '';
     commitData.color = data.color || '';
     commitData.combinedLightness = bgPicker.bgPickerCombinedLightness;
+    commitData.imageColor = bgPicker.bgPickerImageColor;
 
     pageData.set(dataBgKey, commitData);
   };
 
   var colorSum = function(bgColor, fgColor) {
+    if (bgColor == 'transparent') {
+      bgColor = 'rgba(0,0,0,0)';
+    }
+
+    if (fgColor == 'transparent') {
+      fgColor = 'rgba(0,0,0,0)';
+    }
+
     if (bgColor && fgColor) {
       if (typeof bgColor == 'string') {
         bgColor = bgColor.replace(/rgba?\(/,'').replace(/\)/,'').split(',');
@@ -21633,17 +21630,27 @@ return jQuery;
     }
   };
 
-  var positionFooterContent = function() {
-    if (window.innerWidth <= 767) {
+  var positionFooter = function() {
+    if (window.innerWidth <= 860) {
       $('.sidebar').css('padding', '');
     } else {
-      $('.sidebar').css('padding-bottom', $('.footer-content').outerHeight() + 70 + 'px');
+      $('.sidebar').css('padding-bottom', $('.footer').outerHeight() + 70 + 'px');
     }
   };
 
   var bindMenuButton = function() {
-    $('.menu-btn').on('click', function() {
+    $('.menu-btn').on('click', function(event) {
+      event.stopPropagation();
+
       $('body').toggleClass('mobile-menu-open');
+    });
+
+    $('body').on('click', function(event) {
+      if($(event.target).closest('.sidebar-inner-content').length == 0 && $('body').hasClass('mobile-menu-open')) {
+        event.preventDefault();
+        
+        $('body').removeClass('mobile-menu-open');
+      }
     });
   };
 
@@ -21656,12 +21663,16 @@ return jQuery;
   var init = function() {
     // Add site wide functions here.
     handleElementsClick();
-    positionFooterContent();
+    positionFooter();
     bindMenuButton();
     tableWrapper();
 
     $(window).on('resize', function() {
-      positionFooterContent();
+      positionFooter();
+    });
+
+    $('.footer .text_partial').on('keyup', function() {
+      positionFooter();
     });
   };
 

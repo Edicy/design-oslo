@@ -12,15 +12,24 @@
   box-sizing: border-box;
   padding: 9px 10px 9px 38px;
   background: url('../assets/search-icon.svg') no-repeat 12px 12px;
+  background-size: 14px 13px;
   border-radius: 0;
-  @include color($grey-1);
+  @include color($primary-color);
   @include placeholder {
     opacity: 1;
     color: inherit;
+    @include color($grey-1);
   }
 }
 
-.voog-search-modal {
+body .voog-search-modal {
   z-index: 1;
   @extend .content-formatted;
+  font-size: 14px;
+  width: 260px;
+
+  h3 {
+    font-size: 16px;
+    font-family: $font-family-main;
+  }
 }
