@@ -329,6 +329,7 @@ body {
   font-weight: normal;
   padding-left: 20px;
   position: relative;
+  display: block;
 }
 .menu-main .menu-sub .menu-link:before {
   content: '';
