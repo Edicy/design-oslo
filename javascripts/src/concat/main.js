@@ -177,7 +177,7 @@
     $('body').on('click', function(event) {
       if($(event.target).closest('.sidebar-inner-content').length == 0 && $('body').hasClass('mobile-menu-open')) {
         event.preventDefault();
-        
+
         $('body').removeClass('mobile-menu-open');
       }
     });
@@ -188,6 +188,12 @@
       $(this).wrap('<div class="table-holder" />');
     });
   };
+
+  var expandMenu = function() {
+    $('.menu-expander').on('click', function(event) {
+      $(event.target).parent().toggleClass('expanded');
+    });
+  }
 
   var init = function() {
     // Add site wide functions here.
@@ -210,7 +216,8 @@
     bgPickerPreview: bgPickerPreview,
     bgPickerCommit: bgPickerCommit,
     bgPickerColorScheme: bgPickerColorScheme,
-    toggleFlags: toggleFlags
+    toggleFlags: toggleFlags,
+    expandMenu: expandMenu
   });
 
   window.onload = init;

@@ -30,6 +30,9 @@
     Site.toggleFlags();
   </script>
 {% endeditorjsblock %}
+<script>
+  Site.expandMenu();
+</script>
 
 {% comment %}GOOGLE ANALYTICS INITIATION{% endcomment %}
 {% unless editmode %}{{ site.analytics }}{% endunless %}

@@ -304,6 +304,9 @@ body {
   padding: 0;
   list-style: none;
 }
+.menu .menu-item {
+  position: relative;
+}
 
 .menu-main {
   margin-top: 50px;
@@ -320,15 +323,18 @@ body {
 .menu-main .menu .menu-item:first-child {
   margin-top: 0;
 }
+.menu-main .menu .menu-item.active > a {
+  border-bottom: 2px solid #222222;
+}
+.menu-main .menu .menu-item.active > a:hover {
+  color: #222222;
+}
+.menu-main .menu .menu-item.expanded .menu-sub {
+  display: block;
+}
 .menu-main .menu .menu-link {
   text-transform: uppercase;
   font-weight: 600;
-  color: #222222;
-}
-.menu-main .menu .menu-link.active {
-  border-bottom: 2px solid #222222;
-}
-.menu-main .menu .menu-link.active:hover {
   color: #222222;
 }
 .menu-main .menu .menu-link:hover {
@@ -338,6 +344,17 @@ body {
 .menu-main .menu-sub {
   padding-top: 7px;
   padding-bottom: 12px;
+  display: none;
+}
+.menu-main .menu-sub .menu-item.active > a {
+  font-weight: bold;
+  border: none;
+}
+.menu-main .menu-sub .menu-item.active > a:before {
+  opacity: 1;
+}
+.menu-main .menu-sub .menu-item.expanded .menu-third {
+  display: block;
 }
 .menu-main .menu-sub .menu-link {
   text-transform: none;
@@ -354,15 +371,8 @@ body {
   height: 9px;
   position: absolute;
   left: 5px;
-  top: 5px;
+  top: 8px;
   opacity: .5;
-}
-.menu-main .menu-sub .menu-link.active {
-  font-weight: bold;
-  border: none;
-}
-.menu-main .menu-sub .menu-link.active:before {
-  opacity: 1;
 }
 .menu-main .menu-sub .edit-btn {
   margin-left: 5px;
@@ -370,6 +380,7 @@ body {
 .menu-main .menu-third {
   padding-top: 4px;
   padding-bottom: 4px;
+  display: none;
 }
 .menu-main .menu-third .menu-item {
   margin-top: 5px;
@@ -743,6 +754,39 @@ body {
 }
 .menu-tags .menu .menu-item:before {
   content: none;
+}
+
+.menu-expander {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 21px;
+  width: 21px;
+  border: none;
+  border-radius: 100%;
+  background: #E5E5E5 url("../assets/menu-sub-arrow.svg") no-repeat center;
+  background-size: 6px auto;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 200ms;
+  -webkit-transform: rotate(0.25turn);
+  -moz-transform: rotate(0.25turn);
+  -ms-transform: rotate(0.25turn);
+  -o-transform: rotate(0.25turn);
+  transform: rotate(0.25turn);
+}
+@media screen and (max-width: 860px) {
+  .menu-expander {
+    display: block;
+  }
+}
+.expanded > .menu-expander {
+  -webkit-transform: rotate(0.75turn);
+  -moz-transform: rotate(0.75turn);
+  -ms-transform: rotate(0.75turn);
+  -o-transform: rotate(0.75turn);
+  transform: rotate(0.75turn);
 }
 
 /* SIDEBAR */
