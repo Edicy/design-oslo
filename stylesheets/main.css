@@ -406,6 +406,7 @@ body {
   margin-top: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   display: none;
+  z-index: 1;
 }
 .lang-menu-open .menu-lang.flags-enabled .menu {
   display: block;
