@@ -79,17 +79,7 @@
 
   {% include "javascripts" %}
   {% editorjsblock %}
-    <script src='{{ site.static_asset_host }}/libs/edicy-tools/latest/edicy-tools.js'></script>
     <script>
-      var pageData = new Edicy.CustomData({
-        type: 'page',
-        id: {{page.id}}
-      });
-
-      var siteData = new Edicy.CustomData({
-        type: 'site'
-      });
-
       $('.js-background-settings').each(function() {
         var $button = $(this);
 
@@ -106,8 +96,6 @@
           }
         });
       });
-
-      Site.toggleFlags();
     </script>
   {% endeditorjsblock %}
 </body>

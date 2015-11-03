@@ -12,12 +12,24 @@
 </script>
 {% endif %}
 
-{% if editmode %}
+{% editorjsblock %}
+  <script src='{{ site.static_asset_host }}/libs/edicy-tools/latest/edicy-tools.js'></script>
   <script type="text/javascript">
     window.edy = window.edy || [];
     edy.push(['texteditorStyles', {name: 'Button', tagname:'a', attribute: {'href': '#'}, classname: 'custom-btn', toggle: true}]);
+
+    var pageData = new Edicy.CustomData({
+      type: 'page',
+      id: {{page.id}}
+    });
+
+    var siteData = new Edicy.CustomData({
+      type: 'site'
+    });
+
+    Site.toggleFlags();
   </script>
-{% endif %}
+{% endeditorjsblock %}
 
 {% comment %}GOOGLE ANALYTICS INITIATION{% endcomment %}
 {% unless editmode %}{{ site.analytics }}{% endunless %}
