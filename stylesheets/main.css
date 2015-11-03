@@ -49,6 +49,22 @@ body {
 .dark-background {
   color: white;
 }
+.dark-background .edy-empty-bordered {
+  color: rgba(255, 255, 255, 0.5);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+.dark-background .placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.dark-background .edy-content-element-hover {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.dark-background .edy-texteditor-active {
+  outline-color: rgba(255, 255, 255, 0.4);
+}
+.dark-background .edy-texteditor-active:hover {
+  outline-color: rgba(255, 255, 255, 0.63);
+}
 
 .background-color,
 .background-image {
