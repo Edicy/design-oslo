@@ -1074,7 +1074,7 @@ body .voog-search-modal h3 {
 /* FORMS */
 .content-formatted form, body .voog-search-modal form {
   max-width: 100%;
-  margin-top: 25px;
+  margin: 25px 0;
 }
 .content-formatted .form_field, body .voog-search-modal .form_field {
   margin-top: 20px;
