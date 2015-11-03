@@ -102,8 +102,8 @@ body {
 // Styling rules for the main container.
 .container {
   max-width: 970px;
-  margin: 70px auto 70px;
-  padding: 0 40px;
+  padding: 70px 40px 70px;
+  margin: 0 auto;
   overflow: hidden;
 
   a {
@@ -115,7 +115,6 @@ body {
   }
 
   @include query($tablet-small) {
-    margin-top: 0;
     padding-top: 83px;
     margin-bottom: 0;
     padding-bottom: 40px;
