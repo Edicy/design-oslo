@@ -921,6 +921,12 @@ body {
   line-height: 70px;
 }
 @media screen and (max-width: 600px) {
+  .main-content .content-formatted h1, .main-content body .voog-search-modal h1, body .main-content .voog-search-modal h1 {
+    font-size: 38px;
+    line-height: 1.3;
+  }
+}
+@media screen and (max-width: 600px) {
   .main-content .content-formatted, .main-content body .voog-search-modal, body .main-content .voog-search-modal {
     padding: 20px;
   }

@@ -15,6 +15,11 @@
     h1 {
       font-size: 68px;
       line-height: 70px;
+
+      @include query($phone-big) {
+        font-size: 38px;
+        line-height: 1.3;
+      }
     }
 
     @include query($phone-big) {
