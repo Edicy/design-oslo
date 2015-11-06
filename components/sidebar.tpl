@@ -6,6 +6,7 @@
   </div>
 
   <div class="sidebar-inner-content">
+    <button class="menu-btn"></button>
     <nav class="menu-main">
       {% include "menu-level-1" %}
     </nav>
