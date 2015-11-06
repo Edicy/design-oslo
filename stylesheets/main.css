@@ -1241,11 +1241,7 @@ body .voog-search-modal .form_field_with_errors .form_field_textarea {
 }
 
 .comment-form {
-  width: 360px;
   margin-top: 40px;
-}
-.comment-form .form_field_textfield {
-  width: 100%;
 }
 
 .comment-date {
