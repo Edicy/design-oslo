@@ -422,6 +422,9 @@ body {
 .menu-lang .active a {
   color: #222222;
 }
+.menu-lang .edit-btn {
+  padding: 7px 10px;
+}
 .menu-lang.flags-enabled {
   position: relative;
 }

@@ -183,6 +183,10 @@
     @include color($secondary-color);
   }
 
+  .edit-btn {
+    padding: 7px 10px;
+  }
+
   &.flags-enabled {
     position: relative;
 
