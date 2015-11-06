@@ -291,6 +291,14 @@ body {
 .content-formatted .edy-partial-view:first-child, body .voog-search-modal .edy-partial-view:first-child {
   margin-top: 0;
 }
+.content-formatted .edy-image-container-with-title::after, body .voog-search-modal .edy-image-container-with-title::after {
+  content: attr(data-title);
+  display: block;
+  font-size: 14px;
+  opacity: 0.7;
+  line-height: 1;
+  margin-top: 5px;
+}
 
 /* MENUS */
 .menu {
