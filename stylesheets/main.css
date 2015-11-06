@@ -159,6 +159,7 @@ body {
   cursor: pointer;
   text-decoration: none;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  display: inline-block;
 }
 .content-formatted .custom-btn:hover, body .voog-search-modal .custom-btn:hover, .content-formatted .form_submit input:hover, body .voog-search-modal .form_submit input:hover {
   background: rgba(34, 34, 34, 0.9);
@@ -169,6 +170,16 @@ body {
 }
 .dark-background .content-formatted .custom-btn:hover, .dark-background body .voog-search-modal .custom-btn:hover, body .dark-background .voog-search-modal .custom-btn:hover, .dark-background .content-formatted .form_submit input:hover, .content-formatted .form_submit .dark-background body .voog-search-modal input:hover, .content-formatted .form_submit body .dark-background .voog-search-modal input:hover, body .voog-search-modal .form_submit .dark-background .content-formatted input:hover, .dark-background body .voog-search-modal .form_submit input:hover, body .dark-background .voog-search-modal .form_submit input:hover {
   background: rgba(255, 255, 255, 0.9);
+}
+
+.edys-gallery-area {
+  margin: 25px 0;
+}
+.edys-gallery-area:first-child {
+  margin-top: 0;
+}
+.edys-gallery-area:last-child {
+  margin-bottom: 0;
 }
 
 .content-formatted, body .voog-search-modal {
@@ -1154,19 +1165,32 @@ body .voog-search-modal h3 {
 }
 
 /* FORMS */
-.content-formatted .form_area, body .voog-search-modal .form_area,
+.content-formatted form, body .voog-search-modal form,
 .content-formatted .edy-fe-view,
 body .voog-search-modal .edy-fe-view {
   max-width: 100%;
   margin: 25px 0;
 }
-.content-formatted .form_area label, body .voog-search-modal .form_area label,
+.content-formatted form label, body .voog-search-modal form label,
 .content-formatted .edy-fe-view label,
 body .voog-search-modal .edy-fe-view label {
   display: block;
 }
+.content-formatted form:first-child, body .voog-search-modal form:first-child,
+.content-formatted .edy-fe-view:first-child,
+body .voog-search-modal .edy-fe-view:first-child {
+  margin-top: 0;
+}
+.content-formatted form:last-child, body .voog-search-modal form:last-child,
+.content-formatted .edy-fe-view:last-child,
+body .voog-search-modal .edy-fe-view:last-child {
+  margin-bottom: 0;
+}
 .content-formatted .form_field, body .voog-search-modal .form_field {
   margin-top: 20px;
+}
+.content-formatted .form_field:first-child, body .voog-search-modal .form_field:first-child {
+  margin-top: 0;
 }
 .content-formatted .form_field_required .form_field_label:after, body .voog-search-modal .form_field_required .form_field_label:after {
   content: '*';

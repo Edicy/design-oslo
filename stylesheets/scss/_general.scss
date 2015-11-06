@@ -188,6 +188,7 @@ body {
   cursor: pointer;
   text-decoration: none;
   font-family: $font-family-main;
+  display: inline-block;
 
   &:hover {
     background: rgba($secondary-color, 0.9);
@@ -200,5 +201,17 @@ body {
     &:hover {
       background: rgba(white, 0.9);
     }
+  }
+}
+
+.edys-gallery-area {
+  margin: 25px 0;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
   }
 }
