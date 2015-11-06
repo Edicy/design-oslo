@@ -293,12 +293,6 @@ body {
 }
 
 /* MENUS */
-.edit-btn {
-  display: inline-block;
-  vertical-align: middle;
-  line-height: 0.8;
-}
-
 .menu {
   margin: 0;
   padding: 0;
