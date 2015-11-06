@@ -1083,6 +1083,10 @@ body {
 .post-page .post {
   margin: 20px 0;
 }
+.post-page .post-excerpt {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
 
 /* SEARCH */
 .search {
