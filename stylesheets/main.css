@@ -332,6 +332,11 @@ body {
 .menu-main .menu .menu-item.expanded .menu-sub {
   display: block;
 }
+@media screen and (max-width: 860px) {
+  .menu-main .menu .menu-item {
+    padding-right: 25px;
+  }
+}
 .menu-main .menu .menu-link {
   text-transform: uppercase;
   font-weight: 600;
@@ -377,6 +382,11 @@ body {
 .menu-main .menu-sub .edit-btn {
   margin-left: 5px;
 }
+@media screen and (max-width: 860px) {
+  .menu-main .menu-sub {
+    margin-right: -25px;
+  }
+}
 .menu-main .menu-third {
   padding-top: 4px;
   padding-bottom: 4px;
@@ -399,6 +409,11 @@ body {
 }
 .menu-main .menu-third .edit-btn {
   margin-left: 28px;
+}
+@media screen and (max-width: 860px) {
+  .menu-main .menu-third {
+    margin-right: -25px;
+  }
 }
 @media screen and (max-width: 860px) {
   .menu-main {

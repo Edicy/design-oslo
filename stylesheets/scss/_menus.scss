@@ -64,6 +64,10 @@
           display: block;
         }
       }
+
+      @include query($tablet-small) {
+        padding-right: 25px;
+      }
     }
 
     .menu-link {
@@ -127,6 +131,10 @@
     .edit-btn {
       margin-left: 5px;
     }
+
+    @include query($tablet-small) {
+      margin-right: -25px;
+    }
   }
 
   .menu-third {
@@ -155,6 +163,10 @@
 
     .edit-btn {
       margin-left: 28px;
+    }
+
+    @include query($tablet-small) {
+      margin-right: -25px;
     }
   }
 
