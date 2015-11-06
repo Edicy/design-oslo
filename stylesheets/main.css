@@ -1146,11 +1146,15 @@ body .voog-search-modal h3 {
 }
 
 /* FORMS */
-.content-formatted form, body .voog-search-modal form {
+.content-formatted .form_area, body .voog-search-modal .form_area,
+.content-formatted .edy-fe-view,
+body .voog-search-modal .edy-fe-view {
   max-width: 100%;
   margin: 25px 0;
 }
-.content-formatted form label, body .voog-search-modal form label {
+.content-formatted .form_area label, body .voog-search-modal .form_area label,
+.content-formatted .edy-fe-view label,
+body .voog-search-modal .edy-fe-view label {
   display: block;
 }
 .content-formatted .form_field, body .voog-search-modal .form_field {
@@ -1173,7 +1177,6 @@ body .voog-search-modal .form_field_select,
 .content-formatted .form_field_file,
 body .voog-search-modal .form_field_file {
   font: inherit;
-  -webkit-appearance: none;
   border-radius: 0;
 }
 .content-formatted .form_field_textfield, body .voog-search-modal .form_field_textfield,
