@@ -779,7 +779,7 @@ body {
   border-radius: 100%;
   background: #E5E5E5 url("../assets/menu-sub-arrow.svg") no-repeat center;
   background-size: 6px auto;
-  opacity: 0.5;
+  opacity: 0.4;
   cursor: pointer;
   transition: all 200ms;
   -webkit-transform: rotate(0.25turn);
@@ -799,6 +799,7 @@ body {
   -ms-transform: rotate(0.75turn);
   -o-transform: rotate(0.75turn);
   transform: rotate(0.75turn);
+  opacity: 1;
 }
 
 /* SIDEBAR */
