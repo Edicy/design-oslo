@@ -1,7 +1,7 @@
 <article class="post">
   <header class="post-header content-formatted">
     <div class="post-meta">
-      <time class="post-date" datetime="{{ article.created_at | date : "%Y-%m-%d" }}">{{ article.created_at | format_date : "short" }}</time>
+      <time class="post-date" datetime="{{ article.created_at | date : "%Y-%m-%d" }}">{{ article.created_at | format_date : "%b %-d, %Y" }}</time>
       {% if post-box != "article" and article.comments_count > 0 %}
         <a href="{{ article.url }}#comments" class="post-comments-count">{{ "comments_for_count" | lc}}: {{ article.comments_count }}</a>
       {% endif %}
