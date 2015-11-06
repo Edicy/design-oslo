@@ -9,7 +9,7 @@
     <li class="menu-item{% if item.selected? %} active expanded{% endif %}">
       <a class="menu-link{% unless item.translated? %} untranslated fci-editor-menuadd{% endunless %}" href="{{ item.url }}">{{ item.title }}</a>
 
-      {% if item.children? or editmode %}
+      {% if item.children? or item.translated? and editmode %}
         <button class="menu-expander"></button>
         <div class="menu-sub">
           <ul class="menu">

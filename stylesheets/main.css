@@ -301,6 +301,9 @@ body {
 .menu .menu-item {
   position: relative;
 }
+.menu .menu-link.untranslated {
+  opacity: 0.5;
+}
 
 .menu-main {
   margin-top: 50px;
