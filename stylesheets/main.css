@@ -953,6 +953,9 @@ body {
   -moz-align-items: flex-end;
   align-items: flex-end;
 }
+.main-content .background-type {
+  width: 100%;
+}
 .main-content .content-formatted, .main-content body .voog-search-modal, body .main-content .voog-search-modal {
   padding: 40px;
 }

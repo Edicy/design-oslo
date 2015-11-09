@@ -9,6 +9,10 @@
   @include flexbox;
   @include align-items(flex-end);
 
+  .background-type {
+    width: 100%;
+  }
+
   .content-formatted {
     padding: 40px;
 
