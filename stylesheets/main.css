@@ -767,6 +767,9 @@ body {
   padding-left: 12px;
   background: url("../assets/ico-tags.svg?1") no-repeat left 3px;
 }
+.blog-page .menu-tags {
+  margin-bottom: 20px;
+}
 .menu-tags .menu .menu-item {
   display: inline-block;
   margin: 0 0 0 15px;

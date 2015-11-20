@@ -415,6 +415,10 @@ $flags:
   padding-left: 12px;
   background: url('../assets/ico-tags.svg?1') no-repeat left 3px;
 
+  .blog-page & {
+    margin-bottom: 20px;
+  }
+
   .menu {
     .menu-item {
       display: inline-block;
