@@ -14,6 +14,7 @@
       <main class="content" role="main">
         {% include "post-box" with "article" %}
 
+        {% unless article.new_record? %}
         <section id="comments" class="comments content-formatted">
           {% if article.comments_count > 0 %}
             <h2 class="comments-title">{{ "comments_for_count" | lc }} <span class="edy-site-blog-comments-count">({{ article.comments_count }})</span></h2>
@@ -34,6 +35,7 @@
           {% endif %}
 
           {% include "comment-form" %}
+          {% endunless %}
         </section>
 
         {% include "voog-reference" %}
