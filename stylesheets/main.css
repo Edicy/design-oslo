@@ -1212,6 +1212,7 @@ body .voog-search-modal .form_field_select,
 .content-formatted .form_field_file,
 body .voog-search-modal .form_field_file {
   font: inherit;
+  line-height: 1.6;
   border-radius: 0;
 }
 .content-formatted .form_field_textfield, body .voog-search-modal .form_field_textfield,
@@ -1229,7 +1230,7 @@ body .voog-search-modal .form_field_textarea {
   width: 50%;
   margin: 0;
   padding: 7px;
-  border: 1px solid #e4e4e4;
+  border: 1px solid rgba(0, 0, 0, 0.13);
   box-sizing: border-box;
 }
 @media screen and (max-width: 860px) {
@@ -1241,6 +1242,91 @@ body .voog-search-modal .form_field_textarea {
 }
 .content-formatted .form_field_textarea, body .voog-search-modal .form_field_textarea {
   min-height: 98px;
+}
+.content-formatted .form_field_select, body .voog-search-modal .form_field_select {
+  border: 1px solid rgba(0, 0, 0, 0.13);
+  padding: 7px;
+  height: 42px;
+}
+.content-formatted .form_field_checkbox, body .voog-search-modal .form_field_checkbox,
+.content-formatted .form_field_radio,
+body .voog-search-modal .form_field_radio {
+  display: none;
+}
+.content-formatted .form_field_checkbox + .form_control_indicator, body .voog-search-modal .form_field_checkbox + .form_control_indicator,
+.content-formatted .form_field_radio + .form_control_indicator,
+body .voog-search-modal .form_field_radio + .form_control_indicator {
+  height: 18px;
+  width: 18px;
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.13);
+  cursor: pointer;
+}
+.content-formatted .form_field_radio + .form_control_indicator, body .voog-search-modal .form_field_radio + .form_control_indicator {
+  top: -1px;
+  border-radius: 100%;
+}
+.content-formatted .form_field_radio + .form_control_indicator:before, body .voog-search-modal .form_field_radio + .form_control_indicator:before {
+  height: 12px;
+  width: 12px;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: -webkit-transform 0.15s ease;
+  -moz-transition: -moz-transform 0.15s ease;
+  transition: transform 0.15s ease;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  content: '';
+  border-radius: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.content-formatted .form_field_radio:checked + .form_control_indicator:before, body .voog-search-modal .form_field_radio:checked + .form_control_indicator:before {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: -webkit-transform 0.15s ease;
+  -moz-transition: -moz-transform 0.15s ease;
+  transition: transform 0.15s ease;
+}
+.content-formatted .form_field_checkbox + .form_control_indicator, body .voog-search-modal .form_field_checkbox + .form_control_indicator {
+  top: -2px;
+}
+.content-formatted .form_field_checkbox + .form_control_indicator:before, body .voog-search-modal .form_field_checkbox + .form_control_indicator:before {
+  -webkit-transform: scale(0) rotate(45deg);
+  -moz-transform: scale(0) rotate(45deg);
+  -ms-transform: scale(0) rotate(45deg);
+  -o-transform: scale(0) rotate(45deg);
+  transform: scale(0) rotate(45deg);
+  display: block;
+  width: 5px;
+  height: 10px;
+  margin: 1px 0 0 6px;
+  content: '';
+  transition: transform .15s ease 0s;
+  border-width: 0 2px 2px 0;
+  border-style: none solid solid none;
+  border-color: rgba(0, 0, 0, 0.4);
+}
+.content-formatted .form_field_checkbox:checked + .form_control_indicator:before, body .voog-search-modal .form_field_checkbox:checked + .form_control_indicator:before {
+  -webkit-transform: scale(1) rotate(45deg);
+  -moz-transform: scale(1) rotate(45deg);
+  -ms-transform: scale(1) rotate(45deg);
+  -o-transform: scale(1) rotate(45deg);
+  transform: scale(1) rotate(45deg);
+  -webkit-transition: -webkit-transform 0.15s ease;
+  -moz-transition: -moz-transform 0.15s ease;
+  transition: transform 0.15s ease;
 }
 .content-formatted .form_field_size_small, body .voog-search-modal .form_field_size_small {
   width: 25%;

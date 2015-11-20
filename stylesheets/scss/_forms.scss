@@ -48,6 +48,7 @@
   .form_field_select,
   .form_field_file {
     font: inherit;
+    line-height: 1.6;
     border-radius: 0;
   }
   .form_field_textfield,
@@ -61,7 +62,7 @@
     width: 50%;
     margin: 0;
     padding: 7px;
-    @include border(all, 1px, solid, $grey-2);
+    border: 1px solid rgba($black, 0.13);
     box-sizing: border-box;
 
     @include query($tablet-small) {
@@ -72,6 +73,81 @@
     min-height: 98px;
   }
   .form_field_select {
+    border: 1px solid rgba($black, 0.13);
+    padding: 7px;
+    height: 42px;
+  }
+  .form_field_checkbox,
+  .form_field_radio {
+    display: none;
+
+    + .form_control_indicator {
+      height: 18px;
+      width: 18px;
+      position: relative;
+      display: inline-block;
+      margin-right: 10px;
+      vertical-align: middle;
+      border-width: 1px;
+      border-style: solid;
+      border-color: rgba($black, 0.13);
+      cursor: pointer;
+    }
+  }
+  .form_field_radio {
+    + .form_control_indicator {
+      top: -1px;
+      border-radius: 100%;
+
+      &:before {
+        height: 12px;
+        width: 12px;
+        @include transform(scale(0));
+        @include transition(transform 0.15s ease);
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        content: '';
+        border-radius: 100%;
+        background-color: rgba($black, 0.4);
+      }
+    }
+
+    &:checked {
+      + .form_control_indicator {
+        &:before {
+          @include transform(scale(1));
+          @include transition(transform 0.15s ease);
+        }
+      }
+    }
+  }
+  .form_field_checkbox {
+    + .form_control_indicator {
+      top: -2px;
+
+      &:before {
+        @include transform(scale(0) rotate(45deg));
+        display: block;
+        width: 5px;
+        height: 10px;
+        margin: 1px 0 0 6px;
+        content: '';
+        transition: transform .15s ease 0s;
+        border-width: 0 2px 2px 0;
+        border-style: none solid solid none;
+        border-color: rgba($black, .4);
+      }
+    }
+
+    &:checked {
+      + .form_control_indicator {
+        &:before {
+          @include transform(scale(1) rotate(45deg));
+          @include transition(transform .15s ease);
+        }
+      }
+    }
   }
 
   .form_field_size_small {
