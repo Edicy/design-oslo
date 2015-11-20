@@ -11,17 +11,10 @@
   @include query($tablet-small) {
     width: auto;
     margin-right: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    padding: 0 40px;
+    padding: 0;
     box-sizing: border-box;
     background: $white;
-  }
-
-  @include query($phone-big) {
-    padding: 0 20px;
   }
 }
 

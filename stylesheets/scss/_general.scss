@@ -115,7 +115,7 @@ body {
   }
 
   @include query($tablet-small) {
-    padding-top: 83px;
+    padding-top: 0;
     margin-bottom: 0;
     padding-bottom: 40px;
     box-sizing: border-box;

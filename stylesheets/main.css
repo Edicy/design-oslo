@@ -87,7 +87,7 @@ body {
 }
 @media screen and (max-width: 860px) {
   .container {
-    padding-top: 83px;
+    padding-top: 0;
     margin-bottom: 0;
     padding-bottom: 40px;
     box-sizing: border-box;
@@ -842,18 +842,10 @@ body {
   .sidebar {
     width: auto;
     margin-right: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    padding: 0 40px;
+    padding: 0;
     box-sizing: border-box;
     background: #FFFFFF;
-  }
-}
-@media screen and (max-width: 600px) {
-  .sidebar {
-    padding: 0 20px;
   }
 }
 
