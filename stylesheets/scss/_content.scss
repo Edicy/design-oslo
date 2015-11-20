@@ -1,7 +1,8 @@
 /* CONTENT */
 // Styling rules for the site's main content area. These rules affect the entire site.
 .content {
-  flex: 1 1 auto;
+  @include flex(1 1 auto);
+  min-width: 1px;
 }
 
 .main-content {
