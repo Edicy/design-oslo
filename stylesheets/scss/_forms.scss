@@ -76,6 +76,19 @@
     border: 1px solid rgba($black, 0.13);
     padding: 7px;
     height: 42px;
+    background: white;
+    border-radius: 0;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    position: relative;
+    padding-right: 30px;
+    background: url('../assets/ico-arrow.svg') no-repeat calc(-10px + 100%) 50%;
+
+    &::-ms-expand {
+      display: none;
+    }
   }
   .form_field_checkbox,
   .form_field_radio {

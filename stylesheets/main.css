@@ -1248,6 +1248,18 @@ body .voog-search-modal .form_field_textarea {
   border: 1px solid rgba(0, 0, 0, 0.13);
   padding: 7px;
   height: 42px;
+  background: white;
+  border-radius: 0;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  position: relative;
+  padding-right: 30px;
+  background: url("../assets/ico-arrow.svg") no-repeat calc(-10px + 100%) 50%;
+}
+.content-formatted .form_field_select::-ms-expand, body .voog-search-modal .form_field_select::-ms-expand {
+  display: none;
 }
 .content-formatted .form_field_checkbox, body .voog-search-modal .form_field_checkbox,
 .content-formatted .form_field_radio,

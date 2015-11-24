@@ -267,6 +267,12 @@
       "file": "stylesheets/main.min.css",
       "kind": "stylesheets",
       "filename": "main.min.css"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "kind": "assets",
+      "file": "assets/ico-arrow.svg",
+      "filename": "ico-arrow.svg"
     }
   ]
 }
