@@ -94,9 +94,6 @@ body {
     min-height: 100vh;
     position: relative;
   }
-  .front-page .container {
-    padding-top: 63px;
-  }
 }
 @media screen and (max-width: 600px) {
   .container {
@@ -173,7 +170,6 @@ body {
 }
 
 .edys-gallery-area {
-  clear: both;
   margin: 25px 0;
 }
 .edys-gallery-area:first-child {
