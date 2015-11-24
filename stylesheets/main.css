@@ -762,7 +762,40 @@ body {
 
 .menu-tags {
   padding-left: 12px;
-  background: url("../assets/ico-tags.svg?1") no-repeat left 3px;
+  background: url("../assets/ico-tags.svg?1") no-repeat left 6px;
+}
+.menu-tags .tags-opener {
+  position: relative;
+  display: inline-block;
+  padding-right: 15px;
+  cursor: pointer;
+  margin-left: 15px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: bold;
+}
+.menu-tags .tags-opener:after {
+  content: '';
+  border-style: solid;
+  border-width: 5px 5px 0;
+  border-color: currentColor transparent;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translate3d(0, -50%, 0);
+  -moz-transform: translate3d(0, -50%, 0);
+  -ms-transform: translate3d(0, -50%, 0);
+  -o-transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0);
+}
+.menu-tags .tags-opener.active:after {
+  border-width: 0 5px 5px;
+}
+.menu-tags .tags-opener + .menu {
+  display: none;
+}
+.menu-tags .tags-opener.active + .menu {
+  display: block;
 }
 .blog-page .menu-tags {
   margin-bottom: 20px;

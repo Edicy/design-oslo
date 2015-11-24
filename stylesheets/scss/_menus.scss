@@ -413,7 +413,41 @@ $flags:
 
 .menu-tags {
   padding-left: 12px;
-  background: url('../assets/ico-tags.svg?1') no-repeat left 3px;
+  background: url('../assets/ico-tags.svg?1') no-repeat left 6px;
+
+  .tags-opener {
+    position: relative;
+    display: inline-block;
+    padding-right: 15px;
+    cursor: pointer;
+    margin-left: 15px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+
+    &:after {
+      content: '';
+      border-style: solid;
+      border-width: 5px 5px 0;
+      border-color: currentColor transparent;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      @include transform(translate3d(0, -50%, 0));
+    }
+
+    &.active:after {
+      border-width: 0 5px 5px;
+    }
+
+    & + .menu {
+      display: none;
+    }
+
+    &.active + .menu {
+      display: block;
+    }
+  }
 
   .blog-page & {
     margin-bottom: 20px;

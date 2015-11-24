@@ -15,6 +15,10 @@
         $('body').addClass('lang-menu-open');
       }
     });
+
+    $('.js-tags-opener').click(function() {
+      $(this).toggleClass('active');
+    });
   }
 
   var toggleFlags = function() {
