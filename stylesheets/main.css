@@ -173,6 +173,7 @@ body {
 }
 
 .edys-gallery-area {
+  clear: both;
   margin: 25px 0;
 }
 .edys-gallery-area:first-child {
@@ -1174,6 +1175,7 @@ body .voog-search-modal h3 {
 body .voog-search-modal .edy-fe-view {
   max-width: 100%;
   margin: 25px 0;
+  clear: both;
 }
 .content-formatted form label, body .voog-search-modal form label,
 .content-formatted .edy-fe-view label,
