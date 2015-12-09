@@ -191,4 +191,10 @@
     line-height: 1.2;
     margin-top: 5px;
   }
+
+  pre {
+    padding: 10px;
+    background: $grey-1;
+    overflow: auto;
+  }
 }

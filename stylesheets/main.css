@@ -307,6 +307,11 @@ body {
   line-height: 1.2;
   margin-top: 5px;
 }
+.content-formatted pre, body .voog-search-modal pre {
+  padding: 10px;
+  background: #9B9B9B;
+  overflow: auto;
+}
 
 /* MENUS */
 .menu {
