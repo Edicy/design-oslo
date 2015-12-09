@@ -2,7 +2,7 @@
   <div class="sidebar-header">
     <div class="sidebar-title content-formatted">{% unless editmode %}<a href="{{ site.root_item.url }}">{% endunless %}{% editable site.header %}{% unless editmode %}</a>{% endunless %}</div>
 
-    <button class="menu-btn"></button>
+    {% if site.visible_menuitems.size > 0 or site.has_many_languages? or editmode %}<button class="menu-btn"></button>{% endif %}
   </div>
 
   <div class="sidebar-inner-content">
