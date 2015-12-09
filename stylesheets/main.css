@@ -1319,6 +1319,7 @@ body .voog-search-modal .form_field_radio + .form_control_indicator {
   display: inline-block;
   margin-right: 10px;
   vertical-align: middle;
+  background: white;
   border-width: 1px;
   border-style: solid;
   border-color: rgba(0, 0, 0, 0.13);
