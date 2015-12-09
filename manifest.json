@@ -64,13 +64,6 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/header.tpl",
-      "layout_name": "header",
-      "title": "header"
-    },
-    {
-      "content_type": "component",
-      "component": true,
       "file": "components/html-head.tpl",
       "layout_name": "html-head",
       "title": "html-head"
@@ -81,13 +74,6 @@
       "file": "components/bg-picker-styles.tpl",
       "layout_name": "bg-picker-styles",
       "title": "bg-picker-styles"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/menu-lang-mobile.tpl",
-      "layout_name": "menu-lang-mobile",
-      "title": "menu-lang-mobile"
     },
     {
       "content_type": "component",
@@ -141,19 +127,18 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/topbar.tpl",
-      "layout_name": "topbar",
-      "title": "topbar"
-    },
-    {
-      "content_type": "component",
-      "component": true,
       "file": "components/voog-reference.tpl",
       "layout_name": "voog-reference",
       "title": "voog-reference"
     }
   ],
   "assets": [
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/ico-arrow.svg",
+      "kind": "assets",
+      "filename": "ico-arrow.svg"
+    },
     {
       "content_type": "image/svg+xml",
       "file": "assets/ico-comments.svg",
@@ -267,12 +252,6 @@
       "file": "stylesheets/main.min.css",
       "kind": "stylesheets",
       "filename": "main.min.css"
-    },
-    {
-      "content_type": "image/svg+xml",
-      "kind": "assets",
-      "file": "assets/ico-arrow.svg",
-      "filename": "ico-arrow.svg"
     }
   ]
 }
