@@ -468,6 +468,12 @@ body {
 .lang-menu-open .menu-lang.flags-enabled .menu {
   display: block;
 }
+@media screen and (max-width: 860px) {
+  .menu-lang.flags-enabled .menu {
+    top: auto;
+    bottom: 100%;
+  }
+}
 .menu-lang.flags-enabled li {
   padding: 7px 10px;
 }

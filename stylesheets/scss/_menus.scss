@@ -205,6 +205,11 @@
       .lang-menu-open & {
         display: block;
       }
+
+      @include query($tablet-small) {
+        top: auto;
+        bottom: 100%;
+      }
     }
 
     li {
