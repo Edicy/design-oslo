@@ -1209,6 +1209,43 @@ body .voog-search-modal h3 {
   font-size: 16px;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
+body .voog-search-modal .close-btn {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  body .voog-search-modal {
+    top: 0 !important;
+    bottom: 0 !important;
+  }
+  body .voog-search-modal .voog-search-modal-inner {
+    height: 100%;
+    border: none;
+    box-sizing: border-box;
+    max-height: none;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  body .voog-search-modal .voog-search-modal-results {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  body .voog-search-modal h3 {
+    padding-right: 30px;
+  }
+  body .voog-search-modal .close-btn {
+    display: block;
+    border: none;
+    background: url("../assets/ico-menu-open.svg") no-repeat center;
+    width: 63px;
+    height: 63px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0;
+    outline: none;
+  }
+}
 
 /* FORMS */
 .content-formatted form, body .voog-search-modal form,

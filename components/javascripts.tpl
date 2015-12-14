@@ -6,8 +6,25 @@
 <script src="{{ site.static_asset_host }}/libs/edicy-search/latest/edicy-search.js"></script>
 <script>
   var search = new VoogSearch($('.js-search-form').get(0), {
-    per_page: 2,
     lang: '{{ page.language_code }}'
+  });
+
+  $('.js-search-form').on('sitesearch:showmodal', function() {
+    var $modal = $('.voog-search-modal');
+
+    if(!$modal.find('.close-btn').length) {
+      $modal.find('.voog-search-modal-inner').prepend('<button class="close-btn" />');
+    }
+
+    $modal.one('click', '.close-btn', function(event) {
+      search.hideModal();
+
+      return false;
+    })
+  });
+
+  $('.js-search-form').on('sitesearch:hidemodal', function() {
+    $('.voog-search-modal').off('click', '.close-btn');
   });
 </script>
 {% endif %}
