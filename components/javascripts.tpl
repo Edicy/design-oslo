@@ -33,7 +33,7 @@
   <script src='{{ site.static_asset_host }}/libs/edicy-tools/latest/edicy-tools.js'></script>
   <script type="text/javascript">
     window.edy = window.edy || [];
-    edy.push(['texteditorStyles', {name: 'Button', tagname:'a', attribute: {'href': '#'}, classname: 'custom-btn', toggle: true}]);
+    edy.push(['texteditorStyles', {name: '{{ "button" | lc: editor_locale }}', tagname:'a', attribute: {'href': '#'}, classname: 'custom-btn', toggle: true}]);
 
     var pageData = new Edicy.CustomData({
       type: 'page',
