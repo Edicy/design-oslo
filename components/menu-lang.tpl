@@ -1,5 +1,5 @@
 <nav class="menu-lang js-prevent-sideclick{% if flags_state == true %} flags-enabled{% else %} flags-disabled{% endif %}">
-  <button class="lang-menu-btn js-lang-menu-btn js-popup-menu-btn lang-flag {% for language in site.languages %}{% if language.selected? %}lang-flag-{{ language.code }}{% endif %}{% endfor %}"></button>
+  <button class="lang-menu-btn js-lang-menu-btn js-popup-menu-btn lang-flag lang-flag-{{ page.language_code }}"></button>
   <ol class="menu">
     {% for language in site.languages %}
       <li{% if language.selected? %} class="active"{% endif %}>
