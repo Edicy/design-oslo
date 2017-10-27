@@ -8,16 +8,16 @@
     {
       "content_type": "page",
       "component": false,
-      "file": "layouts/front_page.tpl",
-      "layout_name": "page_front",
-      "title": "Front page"
+      "file": "layouts/common_page.tpl",
+      "layout_name": "page_default",
+      "title": "Common page"
     },
     {
       "content_type": "page",
       "component": false,
-      "file": "layouts/common_page.tpl",
-      "layout_name": "page_default",
-      "title": "Common page"
+      "file": "layouts/front_page.tpl",
+      "layout_name": "page_front",
+      "title": "Front page"
     },
     {
       "content_type": "blog",
@@ -36,65 +36,9 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/javascripts.tpl",
-      "layout_name": "javascripts",
-      "title": "javascripts"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/bg-picker-variables.tpl",
-      "layout_name": "bg-picker-variables",
-      "title": "bg-picker-variables"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/comment-form.tpl",
-      "layout_name": "comment-form",
-      "title": "comment-form"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/footer.tpl",
-      "layout_name": "footer",
-      "title": "footer"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/html-head.tpl",
-      "layout_name": "html-head",
-      "title": "html-head"
-    },
-    {
-      "content_type": "component",
-      "component": true,
       "file": "components/bg-picker-styles.tpl",
       "layout_name": "bg-picker-styles",
       "title": "bg-picker-styles"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/menu-lang.tpl",
-      "layout_name": "menu-lang",
-      "title": "menu-lang"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/menu-level-1.tpl",
-      "layout_name": "menu-level-1",
-      "title": "menu-level-1"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/post-box.tpl",
-      "layout_name": "post-box",
-      "title": "post-box"
     },
     {
       "content_type": "component",
@@ -106,16 +50,37 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/sidebar.tpl",
-      "layout_name": "sidebar",
-      "title": "sidebar"
+      "file": "components/post-box.tpl",
+      "layout_name": "post-box",
+      "title": "post-box"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/tags-blog.tpl",
-      "layout_name": "tags-blog",
-      "title": "tags-blog"
+      "file": "components/menu-lang.tpl",
+      "layout_name": "menu-lang",
+      "title": "menu-lang"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/footer.tpl",
+      "layout_name": "footer",
+      "title": "footer"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/bg-picker-variables.tpl",
+      "layout_name": "bg-picker-variables",
+      "title": "bg-picker-variables"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/javascripts.tpl",
+      "layout_name": "javascripts",
+      "title": "javascripts"
     },
     {
       "content_type": "component",
@@ -127,9 +92,51 @@
     {
       "content_type": "component",
       "component": true,
+      "file": "components/sidebar.tpl",
+      "layout_name": "sidebar",
+      "title": "sidebar"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/html-head.tpl",
+      "layout_name": "html-head",
+      "title": "html-head"
+    },
+    {
+      "content_type": "component",
+      "component": true,
       "file": "components/voog-reference.tpl",
       "layout_name": "voog-reference",
       "title": "voog-reference"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/comment-form.tpl",
+      "layout_name": "comment-form",
+      "title": "comment-form"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/template-meta.tpl",
+      "layout_name": "template-meta",
+      "title": "template-meta"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/menu-level-1.tpl",
+      "layout_name": "menu-level-1",
+      "title": "menu-level-1"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/tags-blog.tpl",
+      "layout_name": "tags-blog",
+      "title": "tags-blog"
     }
   ],
   "assets": [
@@ -147,21 +154,9 @@
     },
     {
       "content_type": "image/svg+xml",
-      "file": "assets/ico-flags.svg",
+      "file": "assets/menu-sub-arrow.svg",
       "kind": "assets",
-      "filename": "ico-flags.svg"
-    },
-    {
-      "content_type": "image/svg+xml",
-      "file": "assets/ico-menu-open.svg",
-      "kind": "assets",
-      "filename": "ico-menu-open.svg"
-    },
-    {
-      "content_type": "image/svg+xml",
-      "file": "assets/ico-menu.svg",
-      "kind": "assets",
-      "filename": "ico-menu.svg"
+      "filename": "menu-sub-arrow.svg"
     },
     {
       "content_type": "image/svg+xml",
@@ -171,9 +166,15 @@
     },
     {
       "content_type": "image/svg+xml",
-      "file": "assets/menu-sub-arrow.svg",
+      "file": "assets/ico-menu.svg",
       "kind": "assets",
-      "filename": "menu-sub-arrow.svg"
+      "filename": "ico-menu.svg"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/ico-menu-open.svg",
+      "kind": "assets",
+      "filename": "ico-menu-open.svg"
     },
     {
       "content_type": "image/svg+xml",
@@ -182,16 +183,10 @@
       "filename": "search-icon.svg"
     },
     {
-      "content_type": "image/jpeg",
-      "file": "images/half-content-bg-1.jpg",
-      "kind": "images",
-      "filename": "half-content-bg-1.jpg"
-    },
-    {
-      "content_type": "image/jpeg",
-      "file": "images/half-content-bg-2.jpg",
-      "kind": "images",
-      "filename": "half-content-bg-2.jpg"
+      "content_type": "image/svg+xml",
+      "file": "assets/ico-flags.svg",
+      "kind": "assets",
+      "filename": "ico-flags.svg"
     },
     {
       "content_type": "image/jpeg",
@@ -201,15 +196,21 @@
     },
     {
       "content_type": "image/jpeg",
+      "file": "images/half-content-bg-2.jpg",
+      "kind": "images",
+      "filename": "half-content-bg-2.jpg"
+    },
+    {
+      "content_type": "image/jpeg",
+      "file": "images/half-content-bg-1.jpg",
+      "kind": "images",
+      "filename": "half-content-bg-1.jpg"
+    },
+    {
+      "content_type": "image/jpeg",
       "file": "images/half-content-bg-4.jpg",
       "kind": "images",
       "filename": "half-content-bg-4.jpg"
-    },
-    {
-      "content_type": "image/png",
-      "file": "images/ico-flags.png",
-      "kind": "images",
-      "filename": "ico-flags.png"
     },
     {
       "content_type": "image/jpeg",
@@ -218,10 +219,16 @@
       "filename": "main-content-bg.jpg"
     },
     {
+      "content_type": "image/png",
+      "file": "images/ico-flags.png",
+      "kind": "images",
+      "filename": "ico-flags.png"
+    },
+    {
       "content_type": "application/javascript",
-      "file": "javascripts/application.js",
+      "file": "javascripts/modernizr.min.js",
       "kind": "javascripts",
-      "filename": "application.js"
+      "filename": "modernizr.min.js"
     },
     {
       "content_type": "application/javascript",
@@ -231,27 +238,27 @@
     },
     {
       "content_type": "application/javascript",
-      "file": "javascripts/modernizr.js",
+      "file": "javascripts/application.js",
       "kind": "javascripts",
-      "filename": "modernizr.js"
+      "filename": "application.js"
     },
     {
       "content_type": "application/javascript",
-      "file": "javascripts/modernizr.min.js",
+      "file": "javascripts/modernizr.js",
       "kind": "javascripts",
-      "filename": "modernizr.min.js"
-    },
-    {
-      "content_type": "text/css",
-      "file": "stylesheets/main.css",
-      "kind": "stylesheets",
-      "filename": "main.css"
+      "filename": "modernizr.js"
     },
     {
       "content_type": "text/css",
       "file": "stylesheets/main.min.css",
       "kind": "stylesheets",
       "filename": "main.min.css"
+    },
+    {
+      "content_type": "text/css",
+      "file": "stylesheets/main.css",
+      "kind": "stylesheets",
+      "filename": "main.css"
     }
   ]
 }
